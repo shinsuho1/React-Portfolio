@@ -1,22 +1,18 @@
-import React from 'react'
-import { useEffect, useRef } from "react";
-import Data from './Data'
+import React from "react";
+import { useEffect, useRef, useState } from "react";
+import Data from "./Data";
 import Introduction from "./Introduction";
 import Main from "./Main";
 import ProgreamSlider from "./ProgreamSlider";
-// let posArr = [];
-// setPos();
-// function setPos() {
-//     for (let el of section_arr) {
-//         posArr.push(el.offsetTop)
-//     }
-// }
-function Mainpage() {
 
+function Mainpage() {
+    const scrollRef = useRef(Introduction());
+    console.log(scrollRef);
+    // console.log(scrollRef.current);
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
@@ -25,17 +21,20 @@ function Mainpage() {
         console.log(scrollY);
     };
 
-
-
     return (
         <>
             <Main />
-            <Introduction />
+            <Introduction
+                onScroll={
+                    handleScroll == 800
+                        ? (scrollRef.current.props.className = "on")
+                        : "2"
+                }
+            />
             <ProgreamSlider />
             <Data />
-
         </>
-    )
+    );
 }
 
-export default Mainpage
+export default Mainpage;
