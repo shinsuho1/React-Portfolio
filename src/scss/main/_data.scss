@@ -101,20 +101,23 @@ section.data_page {
 						justify-content: center;
 						align-items: center;
 						flex-direction: column;
-						// .fa-computer,
-						// .fa-id-card,
-						// .fa-graduation-cap {
-						// 	width: 120px;
-						// 	height: 120px;
-						// 	font-size: 80px;
-						// 	display: flex;
-						// 	justify-content: center;
-						// 	align-items: center;
-						// 	border-radius: 50%;
-						// 	color: #fff;
-						// 	background-color: #6a88d8;
-						// 	margin-bottom: 20px;
-						// }
+						font-size: 30px;
+						.icons {
+							width: 120px;
+							height: 120px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							border-radius: 50%;
+							background-color: #6a88d8;
+							margin-bottom: 20px;
+							.fa-computer,
+							.fa-id-card,
+							.fa-graduation-cap {
+								font-size: 80px;
+								color: #fff;
+							}
+						}
 						> p {
 							font: bold 24px/1 'arial';
 							text-align: center;
@@ -161,7 +164,7 @@ section.data_page {
 					opacity: 0;
 					transition: 1s 0.2s;
 					article {
-						.fa-graduation-cap {
+						.icons {
 							transform: scale(1.2);
 							margin-bottom: 40px;
 						}
@@ -269,12 +272,14 @@ section.data_page {
 							width: 80%;
 							height: 100%;
 							margin: 0 auto;
-							.fa-computer,
-							.fa-id-card,
-							.fa-graduation-cap {
+							.icons {
 								width: 100px;
 								height: 100px;
-								font-size: 60px;
+								.fa-computer,
+								.fa-id-card,
+								.fa-graduation-cap {
+									font-size: 60px;
+								}
 							}
 							p {
 								font-size: 4vw;
@@ -293,7 +298,7 @@ section.data_page {
 						opacity: 1;
 						margin-top: 0px;
 						article {
-							.fa-graduation-cap {
+							.icons {
 								transform: scale(1);
 								margin-bottom: 20px;
 							}

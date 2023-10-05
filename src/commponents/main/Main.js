@@ -1,11 +1,23 @@
 import React from 'react'
+import { useRef } from "react";
+
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrosoft } from '@fortawesome/free-brands-svg-icons';
 import { faNode } from '@fortawesome/free-brands-svg-icons';
+
 function Main() {
+    const frame = useRef(null);
+
+    setTimeout(() => {
+        frame.current.classList.add("on");
+    }, 700);
+
+
+
+
     return (
-        <section className="main on">
+        <section className="main" ref={frame}>
             <div className="title">
                 <h2>Microsoft365</h2>
                 <h1>Production Program Introduction</h1>

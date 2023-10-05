@@ -1,17 +1,20 @@
 import React from 'react'
-
+import { useRef } from "react";
 import { Link } from "react-router-dom";
-
-
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 function Header() {
+    const frame = useRef(null);
+
+    setTimeout(() => {
+        frame.current.classList.add("on");
+    }, 300);
 
     return (
-        <header className='on'>
+        <header className="" ref={frame}>
             <div className="inner">
                 <h1>
                     <Link to="/">

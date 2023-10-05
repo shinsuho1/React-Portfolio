@@ -35,18 +35,24 @@ function Data() {
 
                         <div className="left">
                             <article>
-                                <FontAwesomeIcon icon={faComputer} />
+                                <div className="icons">
+                                    <FontAwesomeIcon icon={faComputer} />
+                                </div>
                                 <p>Isproved</p>
                             </article>
                             <article>
-                                <FontAwesomeIcon icon={faIdCard} />
+                                <div className="icons">
+                                    <FontAwesomeIcon icon={faIdCard} />
+                                </div>
                                 <p>Acquisition license</p>
                             </article>
                         </div>
 
                         <div className="right">
                             <article>
-                                <FontAwesomeIcon icon={faGraduationCap} />
+                                <div className="icons">
+                                    <FontAwesomeIcon icon={faGraduationCap} />
+                                </div>
                                 <p>Employment skills</p>
                             </article>
                             <article>
