@@ -2,22 +2,43 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { useState } from "react";
 
+let reClick = true;
 function Support() {
+
+    const [selectedTab, setselectedTab] = useState("faq");
+    const handlingTab = (menu) => {
+        setselectedTab(menu);
+    }
+
+
+    const [menuTab, setmenuTab] = useState("");
+    const handlingmenuTab = (menu) => {
+        reClick ? setmenuTab(menu) : setmenuTab("");
+        reClick ? reClick = false : reClick = true;
+    }
+
     return (
         <section className="support">
             <div className="inner">
                 <ul className="menu">
-                    <li className="on">FAQ</li>
-                    <li>Q&A</li>
-                    <li>Announcement</li>
+                    <li className={selectedTab === "faq" ? "on" : ""}
+                        onClick={() => handlingTab("faq")}>FAQ
+                    </li>
+                    <li className={selectedTab === "qna" ? "on" : ""}
+                        onClick={() => handlingTab("qna")}>Q&A
+                    </li>
+                    <li className={selectedTab === "announcement" ? "on" : ""}
+                        onClick={() => handlingTab("announcement")}>Announcement
+                    </li>
                 </ul>
 
-                <article className="faq on">
+                <article className={selectedTab === "faq" ? "on" : ""}>
                     <article>
-                        <div className="title">
-                            <h2>What is the difference between Office 2021 and Microsoft 365?</h2>
-                            <div className="text">
+                        <div className="title" onClick={() => handlingmenuTab("menu1")} >
+                            <h2 className={`${menuTab === "menu1" && "on"}`}>What is the difference between Office 2021 and Microsoft 365?</h2>
+                            <div className={`text ${menuTab === "menu1" && "on"}`}>
                                 <p>
                                     Office 2021 is sold as a one-time purchase, which means you pay a single, up-front cost to get Office apps for one computer. One-time purchases are available for both PCs and Macs. However, there are no upgrade options, which means if you plan to upgrade to the next major release, you'll have to buy it at full price.
                                 </p>
@@ -29,9 +50,9 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title">
-                            <h2>How do I know if my PC or Mac can run Microsoft 365?</h2>
-                            <div className="text">
+                        <div className="title" onClick={() => handlingmenuTab("menu2")}>
+                            <h2 className={`${menuTab === "menu2" && "on"}`}>How do I know if my PC or Mac can run Microsoft 365?</h2>
+                            <div className={`text ${menuTab === "menu2" && "on"}`}>
                                 <p>
                                     Microsoft 365 is compatible with PC, Mac, Android, and iOS. See <Link to="/">system requirements</Link> for compatible versions of your devices, and for other feature requirements.
                                 </p>
@@ -40,9 +61,9 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title">
-                            <h2>Will Microsoft 365 be identical on a PC and a Mac?</h2>
-                            <div className="text">
+                        <div className="title" onClick={() => handlingmenuTab("menu3")}>
+                            <h2 className={`${menuTab === "menu3" && "on"}`}>Will Microsoft 365 be identical on a PC and a Mac?</h2>
+                            <div className={`text ${menuTab === "menu3" && "on"}`}>
                                 <p>
                                     No. Apps are tailored to work best on each operating system. The apps available for Mac users and the specific features included may be different from those available for PC users. With Microsoft 365, you can be flexible. With your account, you are not limited to exclusively Mac or exclusively PC, so you can transition across device.
                                 </p>
@@ -51,9 +72,9 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title">
-                            <h2>Do I keep control of my documents with a Microsoft 365 subscription?</h2>
-                            <div className="text">
+                        <div className="title" onClick={() => handlingmenuTab("menu4")}>
+                            <h2 className={`${menuTab === "menu4" && "on"}`}>Do I keep control of my documents with a Microsoft 365 subscription?</h2>
+                            <div className={`text ${menuTab === "menu4" && "on"}`}>
                                 <p>
                                     Yes. Documents that you have created belong fully to you. You can choose to store them online on OneDrive or locally on your PC or Mac.
                                 </p>
@@ -62,9 +83,9 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title">
-                            <h2>Is Internet access required for Microsoft 365?</h2>
-                            <div className="text">
+                        <div className="title" onClick={() => handlingmenuTab("menu5")}>
+                            <h2 className={`${menuTab === "menu5" && "on"}`}>Is Internet access required for Microsoft 365?</h2>
+                            <div className={`text ${menuTab === "menu5" && "on"}`}>
                                 <p>
                                     Internet access is required to install and activate all the latest releases of apps and services included in all Microsoft 365 subscription plans. Note that if you are an existing subscriber, you do not need to reinstall or purchase another subscription.
                                 </p>
@@ -82,9 +103,9 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title">
-                            <h2>What is a Microsoft account, and why do I need it for Microsoft 365?</h2>
-                            <div className="text">
+                        <div className="title" onClick={() => handlingmenuTab("menu6")}>
+                            <h2 className={`${menuTab === "menu6" && "on"}`}>What is a Microsoft account, and why do I need it for Microsoft 365?</h2>
+                            <div className={`text ${menuTab === "menu6" && "on"}`}>
                                 <p>
                                     Your Microsoft account is the combination of an email address and password that you use to sign in to services like OneDrive, Xbox LIVE, and Outlook.com. If you use any of these services, you already have a Microsoft account that you can use, or you can create a new account. <Link to="/">Learn more about a Microsoft account.</Link>
                                 </p>
@@ -96,9 +117,9 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title">
-                            <h2>How many people can use a Microsoft 365 subscription?</h2>
-                            <div className="text">
+                        <div className="title" onClick={() => handlingmenuTab("menu7")}>
+                            <h2 className={`${menuTab === "menu7" && "on"}`}>How many people can use a Microsoft 365 subscription?</h2>
+                            <div className={`text ${menuTab === "menu7" && "on"}`}>
                                 <p>
                                     You can share Microsoft 365 Family with five other people, for a total of six users. Microsoft 365 Personal can be used by one person.
                                 </p>
@@ -107,9 +128,9 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title">
-                            <h2>How do I share my subscription benefits with other people?</h2>
-                            <div className="text">
+                        <div className="title" onClick={() => handlingmenuTab("menu8")}>
+                            <h2 className={`${menuTab === "menu8" && "on"}`}>How do I share my subscription benefits with other people?</h2>
+                            <div className={`text ${menuTab === "menu8" && "on"}`}>
                                 <p>
                                     If you have an active Microsoft 365 Family subscription, you can share it with up to five other people. Each person you share your subscription with can install Microsoft 365 on all their devices and sign in to five devices at the same time.
                                 </p>
@@ -122,7 +143,7 @@ function Support() {
                     </article>
                 </article>
 
-                <article className="qna">
+                <article className={selectedTab === "qna" ? "on" : ""}>
                     <article>
                         <div className="title">
                             <h2>Opening the new form and closing the previous</h2>
@@ -252,7 +273,7 @@ function Support() {
                     </article>
                 </article>
 
-                <article className="announcement">
+                <article className={selectedTab === "announcement" ? "on" : ""}>
                     <article>
                         <div className="title">
                             <h2>Streamline supplier engagement with the new ESG value chain solution</h2>

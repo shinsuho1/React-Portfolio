@@ -1,12 +1,18 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { useState } from "react";
 function News() {
+    const [selectedTab, setselectedTab] = useState("menu1");
+    const handlingTab = (menu) => {
+        setselectedTab(menu);
+    }
     return (
         <section className="news on">
             <h1>News <span>Microsoft365</span></h1>
 
             <div className="tab">
-                <div className="content on">
+                <div className={`content ${selectedTab === "menu1" ? "on" : ""}`}
+                    onClick={() => handlingTab("menu1")}>
                     <p className="txt">May 9, 2023<span>|</span>
                         <Link to="/">
                             Jared Spataro
@@ -14,7 +20,8 @@ function News() {
                     </p>
                     <h3>Introducing the Microsoft 365 Copilot Early Access Program and 2023 Microsoft Work Trend Index</h3>
                 </div>
-                <div className="content">
+                <div className={`content ${selectedTab === "menu2" ? "on" : ""}`}
+                    onClick={() => handlingTab("menu2")}>
                     <p className="txt">May 23, 2023<span>|</span>
                         <Link to="/">
                             Frank X. Shaw
@@ -22,7 +29,8 @@ function News() {
                     </p>
                     <h3>Microsoft Build brings AI tools to the forefront for developers</h3>
                 </div>
-                <div className="content">
+                <div className={`content ${selectedTab === "menu3" ? "on" : ""}`}
+                    onClick={() => handlingTab("menu3")}>
                     <p className="txt">May 31, 2023<span>|</span>
                         <Link to="/">
                             Charlie Bell
@@ -30,7 +38,8 @@ function News() {
                     </p>
                     <h3>Building a quantum-safe future</h3>
                 </div>
-                <div className="content">
+                <div className={`content ${selectedTab === "menu4" ? "on" : ""}`}
+                    onClick={() => handlingTab("menu4")}>
                     <p className="txt">May 9, 2023<span>|</span>
                         <Link to="/">
                             Jason Zander
@@ -38,7 +47,8 @@ function News() {
                     </p>
                     <h3>Cloud-based chip design for national security achieves key milestone</h3>
                 </div>
-                <div className="content">
+                <div className={`content ${selectedTab === "menu5" ? "on" : ""}`}
+                    onClick={() => handlingTab("menu5")}>
                     <p className="txt">Jul 18, 2023<span>|</span>
                         <Link to="/">
                             Yusuf Mehdi
@@ -49,7 +59,7 @@ function News() {
             </div>
 
             <div className="inner">
-                <article className="on">
+                <article className={selectedTab === "menu1" ? "on" : ""}>
                     <h2>Introducing the Microsoft 365 Copilot Early Access Program and 2023 Microsoft Work Trend Index</h2>
                     <p className="txt">May 9, 2023<span>|</span>
                         <Link to="/">
@@ -63,7 +73,7 @@ function News() {
                     <p className="two"> <strong>Microsoft 365 Copilot Early Access Program</strong><br />
                         Since March, we’ve been testing Copilot with 20 enterprise customers, learning alongside companies like Chevron, Goodyear, General Motors and Dow. Their overwhelming feedback is that Copilot has the potential to revolutionize work. They point to how it is a game changer for meetings and is beginning to transform the way they create. And, they’ve identified areas where we can do more to help people adapt to this new way of working, like the need for more conversational, multi-turn interactions. As we bring Copilot to more customers, we’ll continue to rely on this kind of feedback to refine Copilot and help guide users as they adapt to this new way of working.</p>
                 </article>
-                <article>
+                <article className={selectedTab === "menu2" ? "on" : ""}>
                     <h2>Microsoft Build brings AI tools to the forefront for developers</h2>
                     <p className="txt">May 23, 2023<span>|</span>
                         <Link to="/">
@@ -77,7 +87,7 @@ function News() {
                     <p className="two"> <strong>Developers can now extend Microsoft 365 Copilot with plugins </strong><br />
                         Plugins for Microsoft 365 Copilot include ChatGPT and Bing plugins, as well as Teams message extensions and Power Platform connectors – enabling developers to leverage their existing investments. And developers will be able to easily build new plugins for Microsoft 365 Copilot with the Microsoft Teams Toolkit for Visual Studio Code and Visual Studio. Developers can also extend Microsoft 365 Copilot by bringing their data into the Microsoft Graph, contextualizing relevant and actionable information with the recently announced Semantic Index for Copilot.</p>
                 </article>
-                <article>
+                <article className={selectedTab === "menu3" ? "on" : ""}>
                     <h2>Building a quantum-safe future</h2>
                     <p className="txt">May 31, 2023<span>|</span>
                         <Link to="/">
@@ -91,7 +101,7 @@ function News() {
                     <p className="two"> <strong>How quantum computing could upend encryption</strong><br />
                         The strength of current cryptographic systems lies in the complexity of certain mathematical problems, one of which involves finding the factor of extraordinarily large numbers — a task that would take traditional computers millions of years to solve. This is the core principle behind the RSA algorithm that’s been in use since the 1970s. Systems using RSA today range from hardware devices such as smart cards and routers, to software applications such as web browsers and email clients. RSA is also used throughout the supply chain of these systems, from the manufacturing of components to the distribution of software updates.</p>
                 </article >
-                <article>
+                <article className={selectedTab === "menu4" ? "on" : ""}>
                     <h2>Cloud-based chip design for national security achieves key milestone</h2>
                     <p className="txt">May 9, 2023<span>|</span>
                         <Link to="/">
@@ -105,7 +115,7 @@ function News() {
                     <p className="two">
                         As part of this effort, three new state-of-the-art chips were developed using the RAMP secure design capability developed by Microsoft within the Azure Government cloud environment to ensure compliance with DoD supply chain requirements. This achievement is a key milestone that marks the first time such chips were designed in the cloud and transmitted via the cloud to chip foundries for manufacture. This process rapidly accelerates the time to market for critical microelectronic components and represents a significant milestone in secure cloud-based microelectronic design and manufacturing. It is also extendable to the commercial design environment in Azure, accelerating the goals of the CHIPS Act to enable a sustainable domestic supply chain for semiconductors.</p>
                 </article>
-                <article>
+                <article className={selectedTab === "menu5" ? "on" : ""}>
                     <h2>Furthering our AI ambitions – Announcing Bing Chat Enterprise and Microsoft 365 Copilot pricing</h2>
                     <p className="txt">Jul 18, 2023<span>|</span>
                         <Link to="/">
