@@ -6,9 +6,6 @@ import Main from "./Main";
 import ProgreamSlider from "./ProgreamSlider";
 
 function Mainpage() {
-    const scrollRef = useRef(Introduction());
-    console.log(scrollRef);
-    // console.log(scrollRef.current);
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
@@ -24,13 +21,7 @@ function Mainpage() {
     return (
         <>
             <Main />
-            <Introduction
-                onScroll={
-                    handleScroll == 800
-                        ? (scrollRef.current.props.className = "on")
-                        : "2"
-                }
-            />
+            <Introduction />
             <ProgreamSlider />
             <Data />
         </>

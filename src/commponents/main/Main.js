@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,9 +9,11 @@ import { faNode } from "@fortawesome/free-brands-svg-icons";
 function Main() {
     const frame = useRef(null);
 
-    setTimeout(() => {
-        frame.current.classList.add("on");
-    }, 700);
+    useEffect(() => {
+        setTimeout(() => {
+            frame.current.classList.add("on");
+        }, 700);
+    });
 
     return (
         <section className="main" ref={frame}>

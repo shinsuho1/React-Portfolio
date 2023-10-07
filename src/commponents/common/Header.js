@@ -1,17 +1,18 @@
-import React from 'react'
-import { useRef } from "react";
+import React from "react";
+import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 
 function Header() {
     const frame = useRef(null);
 
-    setTimeout(() => {
-        frame.current.classList.add("on");
-    }, 300);
+    useEffect(() => {
+        setTimeout(() => {
+            frame.current.classList.add("on");
+        }, 300);
+    }, []);
 
     return (
         <header className="" ref={frame}>
@@ -24,24 +25,16 @@ function Header() {
                 <nav className="menuWeb">
                     <ul id="gnb">
                         <li>
-                            <Link to="/information">
-                                INFORMATION
-                            </Link>
+                            <Link to="/information">INFORMATION</Link>
                         </li>
                         <li>
-                            <Link to="/news">
-                                NEWS
-                            </Link>
+                            <Link to="/news">NEWS</Link>
                         </li>
                         <li>
-                            <Link to="/download">
-                                DOWNLOAD
-                            </Link>
+                            <Link to="/download">DOWNLOAD</Link>
                         </li>
                         <li>
-                            <Link to="/support">
-                                SUPPORT
-                            </Link>
+                            <Link to="/support">SUPPORT</Link>
                         </li>
                     </ul>
                 </nav>
@@ -55,35 +48,31 @@ function Header() {
                         <Link to="/">
                             <FontAwesomeIcon icon={faDiscord} />
                         </Link>
-                        <img src={`${process.env.PUBLIC_URL}/img/close.png`} className="btnClose" alt="Like X ( close button )" />
+                        <img
+                            src={`${process.env.PUBLIC_URL}/img/close.png`}
+                            className="btnClose"
+                            alt="Like X ( close button )"
+                        />
                     </h2>
                     <ul id="gnbMo">
                         <li>
-                            <Link to="/information">
-                                INFORMATION
-                            </Link>
+                            <Link to="/information">INFORMATION</Link>
                         </li>
                         <li>
-                            <Link to="/news">
-                                NEWS
-                            </Link>
+                            <Link to="/news">NEWS</Link>
                         </li>
                         <li>
-                            <Link to="/download">
-                                DOWNLOAD
-                            </Link>
+                            <Link to="/download">DOWNLOAD</Link>
                         </li>
                         <li>
-                            <Link to="/support">
-                                SUPPORT
-                            </Link>
+                            <Link to="/support">SUPPORT</Link>
                         </li>
                     </ul>
                     <p>&copy; Microsoft365 Introduction</p>
                 </nav>
             </div>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;
