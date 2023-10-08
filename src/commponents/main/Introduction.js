@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 function Introduction() {
+    const scrollTop = useRef(null);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            // handleScroll();
+            if (window.scrollY >= scrollTop.current.offsetTop - 300) {
+                scrollTop.current.classList.add("on");
+            }
+        });
+        return;
+    }, []);
+    // const handleScroll = () => {
+    //     let scrollY = window.scrollY;
+    // };
+
     return (
-        <section className="introduction on">
+        <section className="introduction" ref={scrollTop}>
             <div className="inner">
                 <h1>Introduction to where it is used</h1>
                 <p>
