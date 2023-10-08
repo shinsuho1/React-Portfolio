@@ -6,10 +6,22 @@ import { faApple } from "@fortawesome/free-brands-svg-icons";
 import { faAndroid } from "@fortawesome/free-brands-svg-icons";
 function Download() {
     const frame = useRef("");
+    const downloadActive1 = useRef(null);
+    const downloadActive2 = useRef(null);
     useEffect(() => {
         setTimeout(() => {
             frame.current.classList.add("active");
         }, 300);
+
+        window.addEventListener("scroll", () => {
+            let scrollY = window.scrollY;
+            scrollY >= downloadActive1.current.offsetTop - 400 &&
+                downloadActive1.current.classList.add("active");
+
+            scrollY >= downloadActive2.current.offsetTop - 700 &&
+                downloadActive2.current.classList.add("active");
+            return;
+        });
     }, []);
     return (
         <>
@@ -28,18 +40,18 @@ function Download() {
                         Try this package that is essential when working with
                         documents.
                     </p>
-                    <Link to="/" className="btn" title="Microsoft365">
+                    <Link to="/download#;" className="btn" title="Microsoft365">
                         Start Right Now
                     </Link>
                     <p>
                         You feeling burdened? A free trial is also available!
                         <span>
-                            <Link to="/">Get in touch</Link>
+                            <Link to="/download#;">Get in touch</Link>
                         </span>
                     </p>
                 </div>
             </section>
-            <section className="version active">
+            <section className="version" ref={downloadActive1}>
                 <div className="img"></div>
                 <h2>
                     Lightweight apps that
@@ -66,16 +78,16 @@ function Download() {
                 <p>It can be used on the same OS as above.</p>
             </section>
 
-            <section className="type active">
+            <section className="type" ref={downloadActive2}>
                 <h2>
                     Office is now Microsoft 365 Boost productivity with
                     Microsoft more—all in one place.
                 </h2>
                 <div className="btn">
-                    <Link to="/">Personal and family</Link>
-                    <Link to="/">Business</Link>
-                    <Link to="/">Enterprise</Link>
-                    <Link to="/">Education</Link>
+                    <Link to="/download#;">Personal and family</Link>
+                    <Link to="/download#;">Business</Link>
+                    <Link to="/download#;">Enterprise</Link>
+                    <Link to="/download#;">Education</Link>
                 </div>
             </section>
         </>

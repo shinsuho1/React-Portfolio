@@ -7,14 +7,38 @@ import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { faNode } from "@fortawesome/free-brands-svg-icons";
 
 function Main() {
-    const frame = useRef(null);
-
+    const frame = useRef("");
+    const youtubeBtn = useRef("");
+    const vidList = useRef("");
     useEffect(() => {
         setTimeout(() => {
             frame.current.classList.add("on");
         }, 700);
-    });
+    }, []);
 
+    function openYoutube() {
+        frame.current.classList.remove("on");
+        let pop = document.createElement("figure");
+        pop.classList.add("pop");
+
+        pop.innerHTML = `
+            <iframe src="https://www.youtube.com/embed/qKG8r1NERl4" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
+            <span class="btnClose"><img src="./img/close.png" alt=""></span>
+        `;
+        vidList.current.append(pop);
+        document.body.classList.add("stop-scrolling");
+
+        pop.addEventListener("click", (e) => {
+            document.body.classList.remove("stop-scrolling");
+            if (pop) {
+                const close = pop.querySelector("span>img");
+                if (e.target == close) {
+                    pop.remove();
+                    frame.current.classList.add("on");
+                }
+            }
+        });
+    }
     return (
         <section className="main" ref={frame}>
             <div className="title">
@@ -26,28 +50,29 @@ function Main() {
                     <br /> such as presentation materials and materials to be
                     submitted.
                 </p>
-                <Link to="/" className="youtubeBtn">
+                <Link
+                    to="/#;"
+                    className="youtubeBtn"
+                    ref={youtubeBtn}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        openYoutube();
+                    }}
+                >
                     Introduction Video
                 </Link>
-                {/* <a href="#" class="youtubeBtn">Introduction Video</a> */}
 
                 <div className="icons">
-                    <Link
-                        to="https://www.microsoft.com/ko-kr/microsoft-365"
-                        title="Microsoft"
-                    >
+                    <Link to="#;" title="Microsoft">
                         <FontAwesomeIcon icon={faMicrosoft} />
                     </Link>
-                    <Link
-                        to="https://www.adobe.com/kr/creativecloud.html"
-                        title="Adobe"
-                    >
+                    <Link to="#;" title="Adobe">
                         <img
                             src={`${process.env.PUBLIC_URL}/img/어도비 로고.png`}
                             alt="adobe's log img"
                         />
                     </Link>
-                    <Link to="https://nodejs.org/ko" title="Node.js">
+                    <Link to="#;" title="Node.js">
                         <FontAwesomeIcon icon={faNode} />
                     </Link>
                     <p className="ms">Go to the official Microsoft site?</p>
@@ -56,7 +81,7 @@ function Main() {
                 </div>
             </div>
             <div className="square"></div>
-            <div className="vidList"></div>
+            <div className="vidList" ref={vidList}></div>
         </section>
     );
 }

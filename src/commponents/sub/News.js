@@ -32,7 +32,7 @@ function News() {
                 >
                     <p className="txt">
                         May 9, 2023<span>|</span>
-                        <Link to="/">Jared Spataro</Link>
+                        <Link to="/news#;">Jared Spataro</Link>
                     </p>
                     <h3>
                         Introducing the Microsoft 365 Copilot Early Access
@@ -48,7 +48,7 @@ function News() {
                 >
                     <p className="txt">
                         May 23, 2023<span>|</span>
-                        <Link to="/">Frank X. Shaw</Link>
+                        <Link to="/news#;">Frank X. Shaw</Link>
                     </p>
                     <h3>
                         Microsoft Build brings AI tools to the forefront for
@@ -64,7 +64,7 @@ function News() {
                 >
                     <p className="txt">
                         May 31, 2023<span>|</span>
-                        <Link to="/">Charlie Bell</Link>
+                        <Link to="/news#;">Charlie Bell</Link>
                     </p>
                     <h3>Building a quantum-safe future</h3>
                 </div>
@@ -77,7 +77,7 @@ function News() {
                 >
                     <p className="txt">
                         May 9, 2023<span>|</span>
-                        <Link to="/">Jason Zander</Link>
+                        <Link to="/news#;">Jason Zander</Link>
                     </p>
                     <h3>
                         Cloud-based chip design for national security achieves
@@ -93,7 +93,7 @@ function News() {
                 >
                     <p className="txt">
                         Jul 18, 2023<span>|</span>
-                        <Link to="/">Yusuf Mehdi</Link>
+                        <Link to="/news#;">Yusuf Mehdi</Link>
                     </p>
                     <h3>
                         Furthering our AI ambitions – Announcing Bing Chat
@@ -110,7 +110,7 @@ function News() {
                     </h2>
                     <p className="txt">
                         May 9, 2023<span>|</span>
-                        <Link to="/">Jason Zander</Link>
+                        <Link to="/news#;">Jason Zander</Link>
                     </p>
                     <div className="pic">
                         <img
@@ -155,7 +155,7 @@ function News() {
                     </h2>
                     <p className="txt">
                         May 23, 2023<span>|</span>
-                        <Link to="/">Frank X. Shaw</Link>
+                        <Link to="/news#;">Frank X. Shaw</Link>
                     </p>
                     <div className="pic">
                         <img
@@ -197,7 +197,7 @@ function News() {
                     <h2>Building a quantum-safe future</h2>
                     <p className="txt">
                         May 31, 2023<span>|</span>
-                        <Link to="/">Charlie Bell</Link>
+                        <Link to="/news#;">Charlie Bell</Link>
                     </p>
                     <div className="pic">
                         <img
@@ -241,7 +241,7 @@ function News() {
                     </h2>
                     <p className="txt">
                         May 9, 2023<span>|</span>
-                        <Link to="/">Jason Zander</Link>
+                        <Link to="/news#;">Jason Zander</Link>
                     </p>
                     <div className="pic">
                         <img
@@ -289,7 +289,7 @@ function News() {
                     </h2>
                     <p className="txt">
                         Jul 18, 2023<span>|</span>
-                        <Link to="/">Yusuf Mehdi</Link>
+                        <Link to="/news#;">Yusuf Mehdi</Link>
                     </p>
                     <div className="pic">
                         <img

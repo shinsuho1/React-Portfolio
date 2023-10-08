@@ -1,31 +1,27 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, memo } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 function Introduction() {
-    const scrollTop = useRef(null);
+    const scrollValue = useRef(null);
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            // handleScroll();
-            if (window.scrollY >= scrollTop.current.offsetTop - 300) {
-                scrollTop.current.classList.add("on");
+            if (window.scrollY >= scrollValue.current.offsetTop - 300) {
+                scrollValue.current.classList.add("on");
             }
+            return;
         });
-        return;
     }, []);
-    // const handleScroll = () => {
-    //     let scrollY = window.scrollY;
-    // };
 
     return (
-        <section className="introduction" ref={scrollTop}>
+        <section className="introduction" ref={scrollValue}>
             <div className="inner">
                 <h1>Introduction to where it is used</h1>
                 <p>
                     In the situations below, using Microsoft 365 can be used
                     efficiently and allows you to experience more!
-                    <Link to="/"> Lrean more.</Link>
+                    <Link to="/#;"> Lrean more.</Link>
                 </p>
                 <div className="wrap">
                     <article>
@@ -124,4 +120,4 @@ function Introduction() {
     );
 }
 
-export default Introduction;
+export default memo(Introduction);
