@@ -6,13 +6,18 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 function Introduction() {
     const scrollValue = useRef(null);
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY >= scrollValue.current.offsetTop - 300) {
-                scrollValue.current.classList.add("on");
-            }
-            return;
-        });
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
+
+    const handleScroll = () => {
+        if (window.scrollY >= scrollValue.current.offsetTop - 300) {
+            scrollValue.current.classList.add("on");
+        }
+    };
 
     return (
         <section className="introduction" ref={scrollValue}>

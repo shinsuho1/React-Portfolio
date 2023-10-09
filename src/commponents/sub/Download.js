@@ -13,16 +13,18 @@ function Download() {
             frame.current.classList.add("active");
         }, 300);
 
-        window.addEventListener("scroll", () => {
-            let scrollY = window.scrollY;
-            scrollY >= downloadActive1.current.offsetTop - 400 &&
-                downloadActive1.current.classList.add("active");
-
-            scrollY >= downloadActive2.current.offsetTop - 700 &&
-                downloadActive2.current.classList.add("active");
-            return;
-        });
+        window.addEventListener("scroll", handleScroll);
+        window.removeEventListener("scroll", handleScroll);
     }, []);
+    const handleScroll = () => {
+        let scrollY = window.scrollY;
+        if (scrollY >= downloadActive1.current.offsetTop - 400) {
+            downloadActive1.current.classList.add("active");
+        }
+        if (scrollY >= downloadActive2.current.offsetTop - 700) {
+            downloadActive2.current.classList.add("active");
+        }
+    };
     return (
         <>
             <section className="download" ref={frame}>

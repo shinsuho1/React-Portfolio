@@ -11,15 +11,18 @@ function ProgreamSlider() {
     const slider = useRef(null);
     const slider_title = useRef(null);
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY >= scrollValue.current.offsetTop - 300) {
-                scrollValue.current.classList.add("on");
-            }
-            return;
-        });
+        window.addEventListener("scroll", handleScroll);
         init();
-        return;
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
+
+    const handleScroll = () => {
+        if (window.scrollY >= scrollValue.current.offsetTop - 300) {
+            scrollValue.current.classList.add("on");
+        }
+    };
 
     function init() {
         slider.current.style.left = "-100%";

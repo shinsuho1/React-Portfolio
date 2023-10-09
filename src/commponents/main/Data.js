@@ -8,34 +8,36 @@ function Data() {
     const scrollValue = useRef(null);
     let eventOnce = true;
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY >= scrollValue.current.offsetTop - 300) {
-                scrollValue.current.classList.add("on");
-                if (eventOnce) {
-                    eventOnce = false;
-                    const data_lable = document.querySelectorAll(".table");
-                    data_lable.forEach((el, index) => {
-                        let numElement = el.querySelector(".num");
-                        let num = parseFloat(numElement.innerText);
-
-                        let count = 0;
-                        let time = 3000 / num;
-
-                        let interval = setInterval(() => {
-                            if (count == num) {
-                                clearInterval(interval);
-                            } else {
-                                count++;
-                                numElement.innerText = count + "%";
-                            }
-                        }, time);
-                    });
-                }
-            }
-
-            return;
-        });
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
+    const handleScroll = () => {
+        if (window.scrollY >= scrollValue.current.offsetTop - 300) {
+            scrollValue.current.classList.add("on");
+            if (eventOnce) {
+                eventOnce = false;
+                const data_lable = document.querySelectorAll(".table");
+                data_lable.forEach((el, index) => {
+                    let numElement = el.querySelector(".num");
+                    let num = parseFloat(numElement.innerText);
+
+                    let count = 0;
+                    let time = 3000 / num;
+
+                    let interval = setInterval(() => {
+                        if (count == num) {
+                            clearInterval(interval);
+                        } else {
+                            count++;
+                            numElement.innerText = count + "%";
+                        }
+                    }, time);
+                });
+            }
+        }
+    };
     return (
         <section className="data_page" ref={scrollValue}>
             <div className="inner">
