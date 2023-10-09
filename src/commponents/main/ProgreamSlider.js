@@ -25,11 +25,10 @@ function ProgreamSlider() {
     };
 
     function init() {
-        slider.current.style.left = "-100%";
-        slider.current.prepend(slider.lastElementChild);
-
-        slider_title.current.style.left = "-100%";
-        slider_title.current.prepend(slider_title.lastElementChild);
+        // slider.current.style.left = "-100%";
+        // slider.current.append(slider.lastElementChild);
+        // slider_title.current.style.left = "-100%";
+        // slider_title.current.prepend(slider_title.lastElementChild);
     }
 
     function nextSlide() {

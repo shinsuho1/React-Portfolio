@@ -27,7 +27,7 @@ function Data() {
                     let time = 3000 / num;
 
                     let interval = setInterval(() => {
-                        if (count == num) {
+                        if (count === num) {
                             clearInterval(interval);
                         } else {
                             count++;
