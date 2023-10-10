@@ -32,7 +32,7 @@ function Main() {
             document.body.classList.remove("stop-scrolling");
             if (pop) {
                 const close = pop.querySelector("span>img");
-                if (e.target == close) {
+                if (e.target === close) {
                     pop.remove();
                     frame.current.classList.add("on");
                 }

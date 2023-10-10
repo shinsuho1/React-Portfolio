@@ -14,7 +14,9 @@ function Download() {
         }, 300);
 
         window.addEventListener("scroll", handleScroll);
-        window.removeEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
     const handleScroll = () => {
         let scrollY = window.scrollY;
