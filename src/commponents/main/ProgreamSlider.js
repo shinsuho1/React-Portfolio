@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, memo } from "react";
+import React, { useRef, useEffect, memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
@@ -6,28 +6,39 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 function ProgreamSlider() {
     let enableClick = true;
-
     const scrollValue = useRef(null);
     const slider = useRef(null);
     const slider_title = useRef(null);
+    const [items, setItems] = useState("");
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
+        setItems(slider_title.current.childNodes);
+        console.log(items);
         init();
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
 
+    }, []);
     const handleScroll = () => {
         if (window.scrollY >= scrollValue.current.offsetTop - 300) {
             scrollValue.current.classList.add("on");
         }
     };
 
+    const sliderItem = () => {
+        setItems(slider_title.current.childNodes);
+    }
+
     function init() {
-        // slider.current.style.left = "-100%";
+        slider.current.style.left = "-100%";
         // slider.current.append(slider.lastElementChild);
-        // slider_title.current.style.left = "-100%";
+        slider_title.current.style.left = "-100%";
+        const updataSlider = () => {
+            setItems([...items.slice(1), items[0]])
+        }
+        console.log(items);
+
         // slider_title.current.prepend(slider_title.lastElementChild);
     }
 
@@ -97,7 +108,7 @@ function ProgreamSlider() {
             <div className="inner">
                 <div className="title">
                     <ul id="title" ref={slider_title}>
-                        <li className="excel">
+                        <li className="excel" >
                             <h2>Document Processing Program</h2>
                             <h1>Excel</h1>
                         </li>
@@ -358,6 +369,7 @@ function ProgreamSlider() {
                     to="/#;"
                     className="prev"
                     onClick={() => {
+                        console.log(items);
                         prevSlide();
                         prevSlide_title();
                     }}

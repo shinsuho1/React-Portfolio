@@ -11,10 +11,16 @@ function Support() {
         setselectedTab(menu);
     };
 
-    const [menuTab, setmenuTab] = useState("");
+    const [menuTab, setmenuTab] = useState([]);
     const handlingmenuTab = (menu) => {
-        reClick ? setmenuTab(menu) : setmenuTab("");
-        reClick ? (reClick = false) : (reClick = true);
+        // setmenuTab(menu);
+        setmenuTab([...menuTab, menu]);
+        // reClick ? setmenuTab(menu) : setmenuTab("");
+        // reClick ? (reClick = false) : (reClick = true);
+        // console.log(menuTab);
+        menuTab.includes(menu) ? console.log("있음") : console.log("없음");
+        console.log(menuTab)
+        // console.log(menuTab[2]);
     };
 
     return (
@@ -52,9 +58,8 @@ function Support() {
                                 Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${
-                                    menuTab === "menu1" && "on"
-                                }`}
+                                className={`text ${menuTab === "menu1" && "on"
+                                    }`}
                             >
                                 <p>
                                     Office 2021 is sold as a one-time purchase,
@@ -100,9 +105,8 @@ function Support() {
                                 365?
                             </h2>
                             <div
-                                className={`text ${
-                                    menuTab === "menu2" && "on"
-                                }`}
+                                className={`text ${menuTab === "menu2" && "on"
+                                    }`}
                             >
                                 <p>
                                     Microsoft 365 is compatible with PC, Mac,
@@ -127,9 +131,8 @@ function Support() {
                                 Mac?
                             </h2>
                             <div
-                                className={`text ${
-                                    menuTab === "menu3" && "on"
-                                }`}
+                                className={`text ${menuTab === "menu3" && "on"
+                                    }`}
                             >
                                 <p>
                                     No. Apps are tailored to work best on each
@@ -155,9 +158,8 @@ function Support() {
                                 Microsoft 365 subscription?
                             </h2>
                             <div
-                                className={`text ${
-                                    menuTab === "menu4" && "on"
-                                }`}
+                                className={`text ${menuTab === "menu4" && "on"
+                                    }`}
                             >
                                 <p>
                                     Yes. Documents that you have created belong
@@ -178,9 +180,8 @@ function Support() {
                                 Is Internet access required for Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${
-                                    menuTab === "menu5" && "on"
-                                }`}
+                                className={`text ${menuTab === "menu5" && "on"
+                                    }`}
                             >
                                 <p>
                                     Internet access is required to install and
@@ -234,9 +235,8 @@ function Support() {
                                 it for Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${
-                                    menuTab === "menu6" && "on"
-                                }`}
+                                className={`text ${menuTab === "menu6" && "on"
+                                    }`}
                             >
                                 <p>
                                     Your Microsoft account is the combination of
@@ -274,9 +274,8 @@ function Support() {
                                 subscription?
                             </h2>
                             <div
-                                className={`text ${
-                                    menuTab === "menu7" && "on"
-                                }`}
+                                className={`text ${menuTab === "menu7" && "on"
+                                    }`}
                             >
                                 <p>
                                     You can share Microsoft 365 Family with five
@@ -298,9 +297,8 @@ function Support() {
                                 other people?
                             </h2>
                             <div
-                                className={`text ${
-                                    menuTab === "menu8" && "on"
-                                }`}
+                                className={`text ${menuTab === "menu8" && "on"
+                                    }`}
                             >
                                 <p>
                                     If you have an active Microsoft 365 Family
