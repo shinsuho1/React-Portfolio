@@ -12,15 +12,49 @@ function Support() {
     };
 
     const [menuTab, setmenuTab] = useState([]);
-    const handlingmenuTab = (menu) => {
-        // setmenuTab(menu);
-        setmenuTab([...menuTab, menu]);
-        // reClick ? setmenuTab(menu) : setmenuTab("");
-        // reClick ? (reClick = false) : (reClick = true);
-        // console.log(menuTab);
-        menuTab.includes(menu) ? console.log("있음") : console.log("없음");
-        console.log(menuTab)
-        // console.log(menuTab[2]);
+
+    /*const handlingmenuTab = (menu) => {
+        // menuTab.includes(menu) ? console.log("있음") : console.log("없음");
+        const targetValue = menu;
+        let index = menuTab.indexOf(targetValue);
+        const newMenuTab = [
+            ...menuTab.slice(0, index),
+            ...menuTab.slice(index + 1),
+        ];
+        setmenuTab(newMenuTab);
+        if (index !== -1) {
+            menuTab[index].current.classList.add("on");
+        } else {
+            menuTab[index].current.classList.add("on");
+        }
+        // if (menuTab.includes(menu)) {
+        //     if (index !== -1) {
+        //         menuTab[index].current.classList.add("on");
+        //     }
+        // } else if (!menuTab.includes(menu)) {
+        //     menuTab.splice(index, 1);
+        //     console.log(menuTab[index]);
+        //     menuTab[index].current.classList.remove("on");
+        // }
+        // setmenuTab([...menuTab, menu]);
+    };*/
+    const tabs = [
+        { id: 1 },
+        { id: 2 },
+        { id: 3 },
+        { id: 4 },
+        { id: 5 },
+        { id: 6 },
+        { id: 7 },
+        { id: 8 },
+    ];
+
+    const handleTabClick = (id) => {
+        if (menuTab.includes(id)) {
+            setmenuTab(menuTab.filter((menuId) => menuId !== id));
+        } else {
+            setmenuTab([...menuTab, id]);
+        }
     };
 
     return (
@@ -51,15 +85,18 @@ function Support() {
                     <article>
                         <div
                             className="title"
-                            onClick={() => handlingmenuTab("menu1")}
+                            onClick={() => handleTabClick(1)}
                         >
-                            <h2 className={`${menuTab === "menu1" && "on"}`}>
+                            <h2
+                                className={`${menuTab.includes(1) ? "on" : ""}`}
+                            >
                                 What is the difference between Office 2021 and
                                 Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${menuTab === "menu1" && "on"
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(1) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Office 2021 is sold as a one-time purchase,
@@ -98,22 +135,25 @@ function Support() {
                     <article>
                         <div
                             className="title"
-                            onClick={() => handlingmenuTab("menu2")}
+                            onClick={() => handleTabClick(2)}
                         >
-                            <h2 className={`${menuTab === "menu2" && "on"}`}>
+                            <h2
+                                className={`${menuTab.includes(2) ? "on" : ""}`}
+                            >
                                 How do I know if my PC or Mac can run Microsoft
                                 365?
                             </h2>
                             <div
-                                className={`text ${menuTab === "menu2" && "on"
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(2) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Microsoft 365 is compatible with PC, Mac,
-                                    Android, and iOS. See{" "}
+                                    Android, and iOS. See
                                     <Link to="/support#;">
                                         system requirements
-                                    </Link>{" "}
+                                    </Link>
                                     for compatible versions of your devices, and
                                     for other feature requirements.
                                 </p>
@@ -124,15 +164,18 @@ function Support() {
                     <article>
                         <div
                             className="title"
-                            onClick={() => handlingmenuTab("menu3")}
+                            onClick={() => handleTabClick(3)}
                         >
-                            <h2 className={`${menuTab === "menu3" && "on"}`}>
+                            <h2
+                                className={`${menuTab.includes(3) ? "on" : ""}`}
+                            >
                                 Will Microsoft 365 be identical on a PC and a
                                 Mac?
                             </h2>
                             <div
-                                className={`text ${menuTab === "menu3" && "on"
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(3) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     No. Apps are tailored to work best on each
@@ -151,15 +194,18 @@ function Support() {
                     <article>
                         <div
                             className="title"
-                            onClick={() => handlingmenuTab("menu4")}
+                            onClick={() => handleTabClick(4)}
                         >
-                            <h2 className={`${menuTab === "menu4" && "on"}`}>
+                            <h2
+                                className={`${menuTab.includes(4) ? "on" : ""}`}
+                            >
                                 Do I keep control of my documents with a
                                 Microsoft 365 subscription?
                             </h2>
                             <div
-                                className={`text ${menuTab === "menu4" && "on"
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(4) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Yes. Documents that you have created belong
@@ -174,14 +220,17 @@ function Support() {
                     <article>
                         <div
                             className="title"
-                            onClick={() => handlingmenuTab("menu5")}
+                            onClick={() => handleTabClick(5)}
                         >
-                            <h2 className={`${menuTab === "menu5" && "on"}`}>
+                            <h2
+                                className={`${menuTab.includes(5) ? "on" : ""}`}
+                            >
                                 Is Internet access required for Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${menuTab === "menu5" && "on"
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(5) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Internet access is required to install and
@@ -198,7 +247,7 @@ function Support() {
                                     other PCs or to change billing options.
                                     Internet access is also required to access
                                     documents stored on OneDrive, unless you
-                                    install the{" "}
+                                    install the
                                     <Link to="/support#;">
                                         OneDrive desktop app.
                                     </Link>
@@ -228,15 +277,18 @@ function Support() {
                     <article>
                         <div
                             className="title"
-                            onClick={() => handlingmenuTab("menu6")}
+                            onClick={() => handleTabClick(6)}
                         >
-                            <h2 className={`${menuTab === "menu6" && "on"}`}>
+                            <h2
+                                className={`${menuTab.includes(6) ? "on" : ""}`}
+                            >
                                 What is a Microsoft account, and why do I need
                                 it for Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${menuTab === "menu6" && "on"
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(6) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Your Microsoft account is the combination of
@@ -245,7 +297,7 @@ function Support() {
                                     LIVE, and Outlook.com. If you use any of
                                     these services, you already have a Microsoft
                                     account that you can use, or you can create
-                                    a new account.{" "}
+                                    a new account.
                                     <Link to="/support#;">
                                         Learn more about a Microsoft account.
                                     </Link>
@@ -267,15 +319,18 @@ function Support() {
                     <article>
                         <div
                             className="title"
-                            onClick={() => handlingmenuTab("menu7")}
+                            onClick={() => handleTabClick(7)}
                         >
-                            <h2 className={`${menuTab === "menu7" && "on"}`}>
+                            <h2
+                                className={`${menuTab.includes(7) ? "on" : ""}`}
+                            >
                                 How many people can use a Microsoft 365
                                 subscription?
                             </h2>
                             <div
-                                className={`text ${menuTab === "menu7" && "on"
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(7) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     You can share Microsoft 365 Family with five
@@ -290,15 +345,18 @@ function Support() {
                     <article>
                         <div
                             className="title"
-                            onClick={() => handlingmenuTab("menu8")}
+                            onClick={() => handleTabClick(8)}
                         >
-                            <h2 className={`${menuTab === "menu8" && "on"}`}>
+                            <h2
+                                className={`${menuTab.includes(8) ? "on" : ""}`}
+                            >
                                 How do I share my subscription benefits with
                                 other people?
                             </h2>
                             <div
-                                className={`text ${menuTab === "menu8" && "on"
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(8) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     If you have an active Microsoft 365 Family
@@ -309,10 +367,10 @@ function Support() {
                                     devices at the same time.
                                 </p>
                                 <p>
-                                    To add someone to your subscription, visit{" "}
+                                    To add someone to your subscription, visit
                                     <Link to="/support#;">
                                         account.microsoft.com
-                                    </Link>{" "}
+                                    </Link>
                                     and follow the on-screen instructions to add
                                     a user. Each person you add will receive an
                                     email with the steps they need to follow.
@@ -321,7 +379,7 @@ function Support() {
                                     installs they are using, will appear on
                                     their My Account page. You can stop sharing
                                     your subscription with someone or remove a
-                                    device they are using at{" "}
+                                    device they are using at
                                     <Link to="/support#;">
                                         account.microsoft.com.
                                     </Link>
@@ -434,7 +492,7 @@ function Support() {
                                     Where exactly are these files stored? Are
                                     they stored in OneDrive?
                                     <br />
-                                    According to this{" "}
+                                    According to this
                                     <Link to="https://social.msdn.microsoft.com/Forums/en-US/89a9d813-1162-43c5-9421-ffd3f8f8aabf/where-are-the-files-collaborated-in-teams-saved?forum=msteams">
                                         https://social.msdn.microsoft.com/Forums/en-US/89a9d813-1162-43c5-9421-ffd3f8f8aabf/where-are-the-files-collaborated-in-teams-saved?forum=msteams
                                     </Link>
@@ -491,7 +549,7 @@ function Support() {
                             <h2>ASP.NET CORE WEBAPI Bearer Token</h2>
                             <div className="text">
                                 <p>
-                                    This api{" "}
+                                    This api
                                     <Link to="https://visitsapi.azurewebsites.net/api/Visits">
                                         https://visitsapi.azurewebsites.net/api/Visits
                                     </Link>
@@ -500,16 +558,16 @@ function Support() {
                                         https://github.com/KalyanAllam/VisitsApi
                                     </Link>
                                     <br />
-                                    is called in the controller Visitsnew of{" "}
+                                    is called in the controller Visitsnew of
                                     <Link to="">
                                         https://github.com/KalyanAllam/PatientPortal
                                     </Link>
                                 </p>
                                 <p>
-                                    Now I want to make the api{" "}
+                                    Now I want to make the api
                                     <Link to="https://visitsapi.azurewebsites.net/api/Visits">
                                         https://visitsapi.azurewebsites.net/api/Visits
-                                    </Link>{" "}
+                                    </Link>
                                     secure, I like to implement Bearer Token
                                     like JWT please suggest how?
                                 </p>
@@ -726,7 +784,7 @@ function Support() {
                                     the data they need to do this. Without data,
                                     they can’t know the full extent of their
                                     carbon footprint, and they won’t know how to
-                                    fix it.{" "}
+                                    fix it.
                                 </p>
                                 <p>
                                     Transparency is consistently a challenge.
@@ -741,7 +799,7 @@ function Support() {
                                     collect data). But data is difficult to
                                     collect, especially data that comes from
                                     suppliers or other partners outside the
-                                    organization.{" "}
+                                    organization.
                                 </p>
                                 <p>
                                     Digital technologies are helping
@@ -751,22 +809,22 @@ function Support() {
                                     product creation to distribution. A
                                     data-first approach can help drive
                                     efficiency, reduce emissions, and design out
-                                    waste.{" "}
+                                    waste.
                                 </p>
                                 <p>
                                     <Link to="/support#;">
                                         Microsoft Cloud for Sustainability
-                                    </Link>{" "}
+                                    </Link>
                                     solutions help organizations gain more
                                     visibility into sustainability activities
-                                    through their value chain. The new{" "}
+                                    through their value chain. The new
                                     <Link to="/support#;">
                                         ESG value chain solution
-                                    </Link>{" "}
+                                    </Link>
                                     can help organizations increase transparency
                                     and collect more reliable and accurate
                                     information from suppliers up and down their
-                                    value chain.{" "}
+                                    value chain.
                                 </p>
                                 <h4>
                                     Empowering organizations with a streamlined
@@ -788,10 +846,10 @@ function Support() {
                                     to collecting emissions and PCF data, future
                                     releases will expand functionality to
                                     capture water, waste, and additional ESG
-                                    data as well.{" "}
+                                    data as well.
                                 </p>
                                 <p>
-                                    The ESG value chain solution, a feature in{" "}
+                                    The ESG value chain solution, a feature in
                                     <Link to="/support#;">
                                         Microsoft Sustainability Manager
                                     </Link>
@@ -802,7 +860,7 @@ function Support() {
                                     can create surveys and other customized
                                     workflows designed to collect emissions and
                                     ESG data needed for reporting and
-                                    science-based target setting and reductions.{" "}
+                                    science-based target setting and reductions.
                                 </p>
                                 <p>
                                     This solution streamlines supplier
@@ -811,7 +869,7 @@ function Support() {
                                     the organization surveying its suppliers) in
                                     Microsoft Sustainability Manager, it can be
                                     fed right into that organization’s
-                                    calculations and reporting.{" "}
+                                    calculations and reporting.
                                 </p>
                             </div>
                             <p>
@@ -852,11 +910,11 @@ function Support() {
                                     need our frontline workers more than ever.
                                     They’re the driving force behind the retail
                                     industry’s success. That’s why Microsoft is
-                                    committed to{" "}
+                                    committed to
                                     <Link to="/support#;">
                                         Store Operations Assist embedded in
                                         Microsoft Teams
-                                    </Link>{" "}
+                                    </Link>
                                     that empower these frontline heroes. We’ve
                                     seen strong and consistent double-digit
                                     growth in frontline workers’ monthly active
@@ -895,18 +953,18 @@ function Support() {
                                 </p>
                                 <h4>Digitize routine store processes</h4>
                                 <p>
-                                    Retailers can leverage{" "}
+                                    Retailers can leverage
                                     <Link to="/support#;">
                                         Store Operations Assist
-                                    </Link>{" "}
+                                    </Link>
                                     to equip store associates to better serve
                                     customers, providing teams access to
                                     advanced retail workflows, data, and
-                                    insights. Today we’re introducing{" "}
+                                    insights. Today we’re introducing
                                     <Link to="/support#;">
                                         Store Operations Assist embedded in
                                         Microsoft Teams
-                                    </Link>{" "}
+                                    </Link>
                                     to make it even easier for store teams to
                                     stay in the flow of work. Store associates
                                     can easily move between Teams and Store
@@ -963,10 +1021,10 @@ function Support() {
                                     circumstances.
                                 </p>
                                 <p>
-                                    Providers must also{" "}
+                                    Providers must also
                                     <Link to="/support#;">
                                         capitalize on digital technologies
-                                    </Link>{" "}
+                                    </Link>
                                     to help improve operational efficiencies,
                                     quality of care, and patient satisfaction
                                     and retention, as well as optimize revenue
@@ -976,7 +1034,7 @@ function Support() {
                                     Tools like Microsoft Teams play a pivotal
                                     role in the transformative journey in
                                     healthcare. For example, healthcare workers
-                                    are using Teams as their{" "}
+                                    are using Teams as their
                                     <Link to="/support#;">
                                         communications and collaboration hub
                                     </Link>
@@ -1045,7 +1103,7 @@ function Support() {
                                     one of the largest employee
                                     segments—frontline workers. With the
                                     advancements in digital tools and
-                                    next-generation AI, Microsoft can{" "}
+                                    next-generation AI, Microsoft can
                                     <Link to="/support#;">
                                         transform the workplace
                                     </Link>
@@ -1104,7 +1162,7 @@ function Support() {
                                     ecosystem. Partners across multiple
                                     industries joined us at Microsoft Inspire
                                     2023 to learn about the latest developments
-                                    at Microsoft.{" "}
+                                    at Microsoft.
                                 </p>
                                 <p>
                                     It was great to see industry infused
@@ -1113,10 +1171,10 @@ function Support() {
                                     continues to reflect the investments we’re
                                     making in our global partner ecosystem.
                                     These investments are detailed in our
-                                    upcoming{" "}
+                                    upcoming
                                     <Link to="/support#;">
                                         2023 wave 2 release plans.
-                                    </Link>{" "}
+                                    </Link>
                                 </p>
                                 <h4>Optimizing for partners</h4>
                                 <p>
@@ -1127,11 +1185,11 @@ function Support() {
                                     commitments every wave. In a recent blog,
                                     Kathleen Mitford, Corporate Vice President
                                     of Global Industry Marketing discussed in
-                                    detail,{" "}
+                                    detail,
                                     <Link to="/support#;">
                                         our partner strategy
                                     </Link>
-                                    , which aligns to three growth pillars:{" "}
+                                    , which aligns to three growth pillars:
                                 </p>
                                 <p>
                                     Accelerate your innovation and reduce time
@@ -1144,19 +1202,19 @@ function Support() {
                                 <p>
                                     We believe the industry cloud solutions will
                                     provide customers with simplicity and
-                                    predictability when engaging with Microsoft.{" "}
+                                    predictability when engaging with Microsoft.
                                     <Link to="/support#;">
                                         Watch on-demand sessions
-                                    </Link>{" "}
+                                    </Link>
                                     at Microsoft Inspire 2023 to learn more
-                                    about our industry-specific investments.{" "}
+                                    about our industry-specific investments.
                                 </p>
                                 <h4>The latest capabilities </h4>
                                 <p>
-                                    The release notes cover new features for{" "}
+                                    The release notes cover new features for
                                     <Link to="/support#;">
                                         Microsoft Cloud for Industry
-                                    </Link>{" "}
+                                    </Link>
                                     releasing from October 2023 through March
                                     2024. The latest plans for Microsoft Cloud
                                     for Industry bring new innovations that
@@ -1166,13 +1224,13 @@ function Support() {
                                     Microsoft Cloud for Industry applications,
                                     including Microsoft Cloud for Healthcare,
                                     Microsoft Cloud for Retail, and Microsoft
-                                    Cloud for Sustainability.{" "}
+                                    Cloud for Sustainability.
                                 </p>
                                 <h4>Healthcare</h4>
                                 <p>
                                     <Link to="/support#;">
                                         Microsoft Cloud for Healthcare
-                                    </Link>{" "}
+                                    </Link>
                                     provides trusted and integrated capabilities
                                     that make it easier for healthcare
                                     organizations to create personalized patient
@@ -1189,7 +1247,7 @@ function Support() {
                                     productivity, increase workflow automation
                                     to improve the quality of care, reduce
                                     clinician burnout, and deliver better care
-                                    faster at a lower cost.{" "}
+                                    faster at a lower cost.
                                 </p>
                             </div>
                             <p>
@@ -1201,7 +1259,7 @@ function Support() {
                         <div className="title">
                             <h2>
                                 Announcing general availability of Azure Data
-                                Manager for Energy{" "}
+                                Manager for Energy
                             </h2>
                             <div className="text">
                                 <p>
@@ -1210,14 +1268,14 @@ function Support() {
                                     equitable, and sustainable future. To
                                     support this transformative journey, we’re
                                     pleased to announce the general availability
-                                    of{" "}
+                                    of
                                     <Link to="/support#;">
                                         Azure Data Manager for Energy
                                     </Link>
                                     . Designed to help energy companies
                                     accelerate digital innovation, Azure Data
                                     Manager for Energy is an open, fully-managed
-                                    OSDU® Data Platform service powered by the{" "}
+                                    OSDU® Data Platform service powered by the
                                     <Link to="/support#;">Microsoft Cloud</Link>
                                     . The offering integrates with almost any
                                     dataset and source, enables management of
@@ -1280,7 +1338,7 @@ function Support() {
                                     service level agreement (SLA)-backed
                                     performance for optimizing seismic,
                                     wellbore, and reservoir workflows. Learn
-                                    more in the announcement of the{" "}
+                                    more in the announcement of the
                                     <Link to="/support#;">
                                         Azure Data Manager for Energy developer
                                         tier.
@@ -1307,7 +1365,7 @@ function Support() {
                                     energy companies can also work with their
                                     choice of systems integrators to help
                                     prepare and ingest data into Azure Data
-                                    Manager for Energy.{" "}
+                                    Manager for Energy.
                                 </p>
                                 <p>
                                     We are pleased to be working with many
@@ -1377,7 +1435,7 @@ function Support() {
                                     understand the hurdles our customers face
                                     and explore how the Microsoft Cloud can
                                     provide incremental value in an environment
-                                    of macro-economic headwinds.{" "}
+                                    of macro-economic headwinds.
                                 </p>
                                 <p>
                                     We recognize that each manufacturing
@@ -1390,14 +1448,14 @@ function Support() {
                                     consolidating their data from this
                                     multifaceted ecosystem of solutions,
                                     ensuring that it is not only accessible but
-                                    also secure.{" "}
+                                    also secure.
                                 </p>
                                 <p>
-                                    Microsoft has an{" "}
+                                    Microsoft has an
                                     <Link to="/support#;">
                                         unmatched set of deep technological
                                         capabilities
-                                    </Link>{" "}
+                                    </Link>
                                     that are already familiar to users across
                                     organizations, ranging from modern work to
                                     low-code and no-code, to data and AI.
@@ -1407,38 +1465,38 @@ function Support() {
                                     expertise. Rather than trying to do this on
                                     our own, we believe in the capabilities of
                                     our partners to bring the value of the
-                                    Microsoft stack to the industry.{" "}
+                                    Microsoft stack to the industry.
                                 </p>
                                 <h4>
                                     New opportunities for partners with the
                                     Microsoft AI Cloud Partner Program
                                 </h4>
                                 <p>
-                                    I’m very excited about all the{" "}
+                                    I’m very excited about all the
                                     <Link to="/support#;">
                                         updates being shared at Microsoft
                                         Inspire 2023
                                     </Link>
                                     , particularly about the announcement of the
-                                    new{" "}
+                                    new
                                     <Link to="/support#;">
                                         Microsoft AI Cloud Partner Program
                                         (MAICPP)
-                                    </Link>{" "}
+                                    </Link>
                                     and the additional offerings and benefits
                                     this brings for partners. Under the program,
                                     I’m thrilled to announce that we will be
                                     including manufacturing partner solutions
                                     through new independent software vendor
-                                    (ISV) designations.{" "}
+                                    (ISV) designations.
                                 </p>
                                 <p>
                                     This designation represents our commitment
                                     to bringing the best partner solutions to
                                     our customers and provides a way for
                                     customers to identify proven partner
-                                    solutions aligned with the{" "}
-                                    <Link to="/support#;">Microsoft Cloud</Link>{" "}
+                                    solutions aligned with the
+                                    <Link to="/support#;">Microsoft Cloud</Link>
                                     and our industry clouds. The designation
                                     validates that our partners’ solutions meet
                                     the high standards of data accessibility
@@ -1465,7 +1523,7 @@ function Support() {
                                     robust ecosystem of partner solutions,
                                     complemented by the security and scalability
                                     of the Microsoft Cloud and Microsoft
-                                    products.{" "}
+                                    products.
                                 </p>
                                 <p>
                                     We want to thank our first wave of partners
@@ -1474,7 +1532,7 @@ function Support() {
                                     for Manufacturing:
                                     <br />
                                     Find these partner solutions, and much more
-                                    on{" "}
+                                    on
                                     <Link to="/support#;">
                                         Microsoft AppSource
                                     </Link>
@@ -1498,7 +1556,7 @@ function Support() {
                                     complex ecosystem of solutions, delivering
                                     transparent, efficient, and interoperable
                                     processes, to democratize data insights, and
-                                    foster collaboration across the value chain.{" "}
+                                    foster collaboration across the value chain.
                                 </p>
                             </div>
                             <p>
@@ -1520,18 +1578,18 @@ function Support() {
                                     appear overwhelming. To help our partner and
                                     customer ecosystem effectively implement new
                                     industry solutions, we are thrilled to
-                                    announce{" "}
+                                    announce
                                     <Link to="/support#;">
                                         Well-Architected for Industry
                                     </Link>
                                     , a set of principles that provides
                                     prescriptive guidance to improve the quality
                                     of industry solution deployments. Building
-                                    on the success of the{" "}
+                                    on the success of the
                                     <Link to="/support#;">
                                         Well-Architected for Azure
-                                    </Link>{" "}
-                                    framework, we are starting with{" "}
+                                    </Link>
+                                    framework, we are starting with
                                     <Link to="/support#;">
                                         Microsoft Cloud for Sustainability
                                     </Link>
@@ -1539,7 +1597,7 @@ function Support() {
                                 </p>
                                 <h4>
                                     Guiding your Microsoft Cloud for
-                                    Sustainability journey{" "}
+                                    Sustainability journey
                                 </h4>
                                 <p>
                                     With increasing global regulations and a
@@ -1553,19 +1611,19 @@ function Support() {
                                     Microsoft 365, Microsoft Dynamics 365, and
                                     solutions from our global ecosystem of
                                     partners. We recently announced Microsoft
-                                    Sustainability Manager, a{" "}
+                                    Sustainability Manager, a
                                     <Link to="/support#;">
                                         Microsoft Cloud for Sustainability
-                                    </Link>{" "}
-                                    solution, is being expanded{" "}
+                                    </Link>
+                                    solution, is being expanded
                                     <Link to="/support#;">
                                         to give customers fuller visibility
-                                    </Link>{" "}
+                                    </Link>
                                     into their environmental impact across
                                     carbon, water, and waste. New capabilities
                                     will help customers create a comprehensive
                                     ESG data estate and prepare them to meet new
-                                    reporting requirements.{" "}
+                                    reporting requirements.
                                 </p>
                                 <p>
                                     As part of the Well-Architected for Industry
@@ -1581,7 +1639,7 @@ function Support() {
                                     Project Managers, Solution Architects,
                                     Developers, operational team members, and
                                     System Administrators can benefit by
-                                    applying these pillars to their workloads.{" "}
+                                    applying these pillars to their workloads.
                                 </p>
                                 <p>
                                     The Well-Architected for Industry framework
@@ -1606,7 +1664,7 @@ function Support() {
                                     Ultimately, the partner can deliver a
                                     successful solution to their customers,
                                     meeting their requirements while adhering to
-                                    best practices and industry guidelines.{" "}
+                                    best practices and industry guidelines.
                                 </p>
                                 <h4>Reference architecture</h4>
                                 <p>
@@ -1616,11 +1674,11 @@ function Support() {
                                     holistic picture of the core components of
                                     Microsoft Cloud for Sustainability. As an
                                     example, a Solution Architect can leverage
-                                    the{" "}
+                                    the
                                     <Link to="/support#;">
                                         reference architecture for Microsoft
                                         Sustainability Manager
-                                    </Link>{" "}
+                                    </Link>
                                     to identify the required data ingestion
                                     strategies and extensibility needed for
                                     emission calculations. Further, reference
@@ -1635,7 +1693,7 @@ function Support() {
                                     permissions, and the components that are
                                     self-managed by the system such as the
                                     analytics data lake and dataverse
-                                    components.{" "}
+                                    components.
                                 </p>
                                 <p>
                                     We have launched reference architecture for
@@ -1646,7 +1704,7 @@ function Support() {
                                     interface, analytics, and
                                     integration—including a clear sense of
                                     separation between extensible and managed
-                                    components and capabilities.{" "}
+                                    components and capabilities.
                                 </p>
                             </div>
                             <p>
