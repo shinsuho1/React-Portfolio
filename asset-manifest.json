@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/React-github.io/React-Portfolio/static/css/main.471fa983.css",
+    "main.js": "/React-github.io/React-Portfolio/static/js/main.40c55365.js",
+    "static/media/download_main.png": "/React-github.io/React-Portfolio/static/media/download_main.26a2dbf72c3ebd61d821.png",
+    "index.html": "/React-github.io/React-Portfolio/index.html",
+    "main.471fa983.css.map": "/React-github.io/React-Portfolio/static/css/main.471fa983.css.map",
+    "main.40c55365.js.map": "/React-github.io/React-Portfolio/static/js/main.40c55365.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.471fa983.css",
+    "static/js/main.40c55365.js"
+  ]
+}
