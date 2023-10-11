@@ -16,29 +16,29 @@ function Main() {
         }, 700);
     }, []);
 
-    function openYoutube() {
-        frame.current.classList.remove("on");
-        let pop = document.createElement("figure");
-        pop.classList.add("pop");
+    // function openYoutube() {
+    //     frame.current.classList.remove("on");
+    //     let pop = document.createElement("figure");
+    //     pop.classList.add("pop");
 
-        pop.innerHTML = `
-            <iframe src="https://www.youtube.com/embed/qKG8r1NERl4" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
-            <span class="btnClose"><img src="./img/close.png" alt=""></span>
-        `;
-        vidList.current.append(pop);
-        document.body.classList.add("stop-scrolling");
+    //     pop.innerHTML = `
+    //         <iframe src="https://www.youtube.com/embed/qKG8r1NERl4" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
+    //         <span class="btnClose"><img src="./img/close.png" alt=""></span>
+    //     `;
+    //     vidList.current.append(pop);
+    //     document.body.classList.add("stop-scrolling");
 
-        pop.addEventListener("click", (e) => {
-            document.body.classList.remove("stop-scrolling");
-            if (pop) {
-                const close = pop.querySelector("span>img");
-                if (e.target === close) {
-                    pop.remove();
-                    frame.current.classList.add("on");
-                }
-            }
-        });
-    }
+    //     pop.addEventListener("click", (e) => {
+    //         document.body.classList.remove("stop-scrolling");
+    //         if (pop) {
+    //             const close = pop.querySelector("span>img");
+    //             if (e.target === close) {
+    //                 pop.remove();
+    //                 frame.current.classList.add("on");
+    //             }
+    //         }
+    //     });
+    // }
     return (
         <section className="main" ref={frame}>
             <div className="title">
@@ -56,7 +56,7 @@ function Main() {
                     ref={youtubeBtn}
                     onClick={(e) => {
                         e.preventDefault();
-                        openYoutube();
+                        // openYoutube();
                     }}
                 >
                     Introduction Video
