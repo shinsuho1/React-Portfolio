@@ -26,20 +26,12 @@ function ProgreamSlider() {
         }
     };
 
-    const sliderItem = () => {
-        setItems(slider_title.current.childNodes);
-    }
 
     function init() {
         slider.current.style.left = "-100%";
-        // slider.current.append(slider.lastElementChild);
+        slider.current.prepend(slider.current.lastElementChild);
         slider_title.current.style.left = "-100%";
-        const updataSlider = () => {
-            setItems([...items.slice(1), items[0]])
-        }
-        console.log(items);
-
-        // slider_title.current.prepend(slider_title.lastElementChild);
+        slider_title.current.prepend(slider_title.current.lastElementChild);
     }
 
     function nextSlide() {
@@ -48,7 +40,7 @@ function ProgreamSlider() {
         slider.current.addEventListener(
             "transitionend",
             () => {
-                slider.current.append(slider.firstElementChild);
+                slider.current.append(slider.current.firstElementChild);
                 slider.current.style.transition = "none";
                 slider.current.style.marginLeft = "0%";
                 enableClick = true;
@@ -62,7 +54,7 @@ function ProgreamSlider() {
         slider_title.current.addEventListener(
             "transitionend",
             () => {
-                slider_title.current.append(slider_title.firstElementChild);
+                slider_title.current.append(slider_title.current.firstElementChild);
                 slider_title.current.style.transition = "none";
                 slider_title.current.style.marginLeft = "0%";
                 enableClick = true;
@@ -74,11 +66,10 @@ function ProgreamSlider() {
     function prevSlide() {
         slider.current.style.transition = "margin-left 1s";
         slider.current.style.marginLeft = "100%";
-
         slider.current.addEventListener(
             "transitionend",
             () => {
-                slider.current.prepend(slider.lastElementChild);
+                slider.current.prepend(slider.current.lastElementChild);
                 slider.current.style.transition = "none";
                 slider.current.style.marginLeft = "0%";
                 enableClick = true;
@@ -90,11 +81,10 @@ function ProgreamSlider() {
     function prevSlide_title() {
         slider_title.current.style.transition = "margin-left 1s";
         slider_title.current.style.marginLeft = "100%";
-
         slider_title.current.addEventListener(
             "transitionend",
             () => {
-                slider_title.current.prepend(slider_title.lastElementChild);
+                slider_title.current.prepend(slider_title.current.lastElementChild);
                 slider_title.current.style.transition = "none";
                 slider_title.current.style.marginLeft = "0%";
                 enableClick = true;
@@ -369,7 +359,6 @@ function ProgreamSlider() {
                     to="/#;"
                     className="prev"
                     onClick={() => {
-                        console.log(items);
                         prevSlide();
                         prevSlide_title();
                     }}

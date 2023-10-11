@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,15 +6,19 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const { kakao } = window;
 function Information() {
+    //페이지가 로드됫을때 section(main)과 각 아티클에 first클래스를 붙이고, 해당 아티클을 눌렀을때 pop에 asides객체에서 해당 값 넣어주는 코드입니다
     const main = useRef(null);
     const article1 = useRef(null);
     const article2 = useRef(null);
     const article3 = useRef(null);
     const pop = useRef(null);
+
     const locationPop = useRef(null);
     const [asideTitle, setasideTitle] = useState("");
     const [asideExplan, setasideExplan] = useState("");
     const [asideImg, setasideImg] = useState("");
+
+    // const [aside, dispatch] = useReducer(asideReducer,0);
     const asides = [
         {
             img: "img/sub/information/Second_article_1.jpg",
