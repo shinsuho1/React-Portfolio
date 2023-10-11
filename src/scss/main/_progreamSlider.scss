@@ -97,7 +97,6 @@
 						height: 400px;
 						float: left;
 						margin-right: 20px;
-						background-color: #fff;
 						padding: 40px;
 						h2 {
 							display: none;
@@ -105,12 +104,10 @@
 							font-size: 30px;
 						}
 						h3 {
-							color: black;
 							font: bold 30px/1 'Pretendard-Regular';
 							margin-bottom: 13px;
 						}
 						p {
-							color: black;
 							font: 18px/1.2 'Pretendard-Regular';
 							&:nth-of-type(1) {
 								margin-bottom: 30px;

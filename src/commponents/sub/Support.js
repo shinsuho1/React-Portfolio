@@ -141,7 +141,7 @@ function Support() {
                                     Microsoft 365 is compatible with PC, Mac,
                                     Android, and iOS. See
                                     <Link to="/support#;">
-                                        system requirements
+                                        &nbsp;system requirements&nbsp;
                                     </Link>
                                     for compatible versions of your devices, and
                                     for other feature requirements.
@@ -235,8 +235,9 @@ function Support() {
                                     documents stored on OneDrive, unless you
                                     install the
                                     <Link to="/support#;">
-                                        OneDrive desktop app.
+                                        &nbsp;OneDrive desktop app
                                     </Link>
+                                    .
                                 </p>
                                 <p>
                                     You should also connect to the Internet
@@ -284,8 +285,9 @@ function Support() {
                                     account that you can use, or you can create
                                     a new account.
                                     <Link to="/support#;">
-                                        Learn more about a Microsoft account.
+                                        &nbsp;Learn more about a Microsoft account
                                     </Link>
+                                    .
                                 </p>
                                 <p>
                                     As part of signing up for a trial or
@@ -352,7 +354,7 @@ function Support() {
                                 <p>
                                     To add someone to your subscription, visit
                                     <Link to="/support#;">
-                                        account.microsoft.com
+                                        &nbsp;account.microsoft.com&nbsp;
                                     </Link>
                                     and follow the on-screen instructions to add
                                     a user. Each person you add will receive an
@@ -364,8 +366,9 @@ function Support() {
                                     your subscription with someone or remove a
                                     device they are using at
                                     <Link to="/support#;">
-                                        account.microsoft.com.
+                                        &nbsp;account.microsoft.com
                                     </Link>
+                                    .
                                 </p>
                             </div>
                             <p>2023-09-07</p>
@@ -483,7 +486,7 @@ function Support() {
                                     <br />
                                     According to this
                                     <Link to="https://social.msdn.microsoft.com/Forums/en-US/89a9d813-1162-43c5-9421-ffd3f8f8aabf/where-are-the-files-collaborated-in-teams-saved?forum=msteams">
-                                        https://social.msdn.microsoft.com/Forums/en-US/89a9d813-1162-43c5-9421-ffd3f8f8aabf/where-are-the-files-collaborated-in-teams-saved?forum=msteams
+                                        &nbsp;https://social.msdn.microsoft.com/Forums/en-US/89a9d813-1162-43c5-9421-ffd3f8f8aabf/where-are-the-files-collaborated-in-teams-saved?forum=msteams
                                     </Link>
                                 </p>
 
@@ -542,22 +545,22 @@ function Support() {
                                 <p>
                                     This api
                                     <Link to="https://visitsapi.azurewebsites.net/api/Visits">
-                                        https://visitsapi.azurewebsites.net/api/Visits
+                                        &nbsp;https://visitsapi.azurewebsites.net/api/Visits&nbsp;
                                     </Link>
                                     ㅣ
                                     <Link to="https://github.com/KalyanAllam/VisitsApi">
-                                        https://github.com/KalyanAllam/VisitsApi
+                                        &nbsp;https://github.com/KalyanAllam/VisitsApi&nbsp;
                                     </Link>
                                     <br />
                                     is called in the controller Visitsnew of
                                     <Link to="">
-                                        https://github.com/KalyanAllam/PatientPortal
+                                        &nbsp;https://github.com/KalyanAllam/PatientPortal
                                     </Link>
                                 </p>
                                 <p>
                                     Now I want to make the api
                                     <Link to="https://visitsapi.azurewebsites.net/api/Visits">
-                                        https://visitsapi.azurewebsites.net/api/Visits
+                                        &nbsp;https://visitsapi.azurewebsites.net/api/Visits&nbsp;
                                     </Link>
                                     secure, I like to implement Bearer Token
                                     like JWT please suggest how?
@@ -812,13 +815,13 @@ function Support() {
                                 </p>
                                 <p>
                                     <Link to="/support#;">
-                                        Microsoft Cloud for Sustainability
+                                        Microsoft Cloud for Sustainability&nbsp;
                                     </Link>
                                     solutions help organizations gain more
                                     visibility into sustainability activities
                                     through their value chain. The new
                                     <Link to="/support#;">
-                                        ESG value chain solution
+                                        &nbsp;ESG value chain solution&nbsp;
                                     </Link>
                                     can help organizations increase transparency
                                     and collect more reliable and accurate
@@ -850,7 +853,7 @@ function Support() {
                                 <p>
                                     The ESG value chain solution, a feature in
                                     <Link to="/support#;">
-                                        Microsoft Sustainability Manager
+                                        &nbsp;Microsoft Sustainability Manager&nbsp;
                                     </Link>
                                     , will enable organizations to collect and
                                     report more detailed data about
@@ -913,8 +916,8 @@ function Support() {
                                     industry’s success. That’s why Microsoft is
                                     committed to
                                     <Link to="/support#;">
-                                        Store Operations Assist embedded in
-                                        Microsoft Teams
+                                        &nbsp;Store Operations Assist embedded in
+                                        Microsoft Teams&nbsp;
                                     </Link>
                                     that empower these frontline heroes. We’ve
                                     seen strong and consistent double-digit
@@ -956,15 +959,15 @@ function Support() {
                                 <p>
                                     Retailers can leverage
                                     <Link to="/support#;">
-                                        Store Operations Assist
+                                        &nbsp;Store Operations Assist&nbsp;
                                     </Link>
                                     to equip store associates to better serve
                                     customers, providing teams access to
                                     advanced retail workflows, data, and
                                     insights. Today we’re introducing
                                     <Link to="/support#;">
-                                        Store Operations Assist embedded in
-                                        Microsoft Teams
+                                        &nbsp;Store Operations Assist embedded in
+                                        Microsoft Teams&nbsp;
                                     </Link>
                                     to make it even easier for store teams to
                                     stay in the flow of work. Store associates
@@ -1026,7 +1029,7 @@ function Support() {
                                 <p>
                                     Providers must also
                                     <Link to="/support#;">
-                                        capitalize on digital technologies
+                                        &nbsp;capitalize on digital technologies&nbsp;
                                     </Link>
                                     to help improve operational efficiencies,
                                     quality of care, and patient satisfaction
@@ -1039,7 +1042,7 @@ function Support() {
                                     healthcare. For example, healthcare workers
                                     are using Teams as their
                                     <Link to="/support#;">
-                                        communications and collaboration hub
+                                        &nbsp;communications and collaboration hub
                                     </Link>
                                     , facilitating virtual video visits and
                                     keeping care teams connected. We’ve seen
@@ -1110,7 +1113,7 @@ function Support() {
                                     advancements in digital tools and
                                     next-generation AI, Microsoft can
                                     <Link to="/support#;">
-                                        transform the workplace
+                                        &nbsp;transform the workplace&nbsp;
                                     </Link>
                                     in the same way that we are transforming
                                     other aspects of the business—by unleashing
@@ -1180,8 +1183,9 @@ function Support() {
                                     These investments are detailed in our
                                     upcoming
                                     <Link to="/support#;">
-                                        2023 wave 2 release plans.
+                                        &nbsp;2023 wave 2 release plans
                                     </Link>
+                                    .
                                 </p>
                                 <h4>Optimizing for partners</h4>
                                 <p>
@@ -1194,7 +1198,7 @@ function Support() {
                                     of Global Industry Marketing discussed in
                                     detail,
                                     <Link to="/support#;">
-                                        our partner strategy
+                                        &nbsp;our partner strategy
                                     </Link>
                                     , which aligns to three growth pillars:
                                 </p>
@@ -1211,7 +1215,7 @@ function Support() {
                                     provide customers with simplicity and
                                     predictability when engaging with Microsoft.
                                     <Link to="/support#;">
-                                        Watch on-demand sessions
+                                        &nbsp;Watch on-demand sessions&nbsp;
                                     </Link>
                                     at Microsoft Inspire 2023 to learn more
                                     about our industry-specific investments.
@@ -1220,7 +1224,7 @@ function Support() {
                                 <p>
                                     The release notes cover new features for
                                     <Link to="/support#;">
-                                        Microsoft Cloud for Industry
+                                        &nbsp;Microsoft Cloud for Industry&nbsp;
                                     </Link>
                                     releasing from October 2023 through March
                                     2024. The latest plans for Microsoft Cloud
@@ -1236,7 +1240,7 @@ function Support() {
                                 <h4>Healthcare</h4>
                                 <p>
                                     <Link to="/support#;">
-                                        Microsoft Cloud for Healthcare
+                                        &nbsp;Microsoft Cloud for Healthcare&nbsp;
                                     </Link>
                                     provides trusted and integrated capabilities
                                     that make it easier for healthcare
@@ -1279,13 +1283,13 @@ function Support() {
                                     pleased to announce the general availability
                                     of
                                     <Link to="/support#;">
-                                        Azure Data Manager for Energy
+                                        &nbsp;Azure Data Manager for Energy&nbsp;
                                     </Link>
                                     . Designed to help energy companies
                                     accelerate digital innovation, Azure Data
                                     Manager for Energy is an open, fully-managed
                                     OSDU® Data Platform service powered by the
-                                    <Link to="/support#;">Microsoft Cloud</Link>
+                                    <Link to="/support#;">&nbsp;Microsoft Cloud&nbsp;</Link>
                                     . The offering integrates with almost any
                                     dataset and source, enables management of
                                     compute-intensive workloads at global scale,
@@ -1349,9 +1353,10 @@ function Support() {
                                     wellbore, and reservoir workflows. Learn
                                     more in the announcement of the
                                     <Link to="/support#;">
-                                        Azure Data Manager for Energy developer
-                                        tier.
+                                        &nbsp;Azure Data Manager for Energy developer
+                                        tier
                                     </Link>
+                                    .
                                 </p>
                                 <h4>
                                     Eliminating data silos with easy
@@ -1464,8 +1469,8 @@ function Support() {
                                 <p>
                                     Microsoft has an
                                     <Link to="/support#;">
-                                        unmatched set of deep technological
-                                        capabilities
+                                        &nbsp;unmatched set of deep technological
+                                        capabilities&nbsp;
                                     </Link>
                                     that are already familiar to users across
                                     organizations, ranging from modern work to
@@ -1485,14 +1490,14 @@ function Support() {
                                 <p>
                                     I’m very excited about all the
                                     <Link to="/support#;">
-                                        updates being shared at Microsoft
+                                        &nbsp;updates being shared at Microsoft
                                         Inspire 2023
                                     </Link>
                                     , particularly about the announcement of the
                                     new
                                     <Link to="/support#;">
-                                        Microsoft AI Cloud Partner Program
-                                        (MAICPP)
+                                        &nbsp;Microsoft AI Cloud Partner Program
+                                        (MAICPP)&nbsp;
                                     </Link>
                                     and the additional offerings and benefits
                                     this brings for partners. Under the program,
@@ -1507,7 +1512,7 @@ function Support() {
                                     our customers and provides a way for
                                     customers to identify proven partner
                                     solutions aligned with the
-                                    <Link to="/support#;">Microsoft Cloud</Link>
+                                    <Link to="/support#;">&nbsp;Microsoft Cloud&nbsp;</Link>
                                     and our industry clouds. The designation
                                     validates that our partners’ solutions meet
                                     the high standards of data accessibility
@@ -1545,7 +1550,7 @@ function Support() {
                                     Find these partner solutions, and much more
                                     on
                                     <Link to="/support#;">
-                                        Microsoft AppSource
+                                        &nbsp;Microsoft AppSource
                                     </Link>
                                     .
                                 </p>
@@ -1593,18 +1598,18 @@ function Support() {
                                     industry solutions, we are thrilled to
                                     announce
                                     <Link to="/support#;">
-                                        Well-Architected for Industry
+                                        &nbsp;Well-Architected for Industry
                                     </Link>
                                     , a set of principles that provides
                                     prescriptive guidance to improve the quality
                                     of industry solution deployments. Building
                                     on the success of the
                                     <Link to="/support#;">
-                                        Well-Architected for Azure
+                                        &nbsp;Well-Architected for Azure&nbsp;
                                     </Link>
                                     framework, we are starting with
                                     <Link to="/support#;">
-                                        Microsoft Cloud for Sustainability
+                                        &nbsp;Microsoft Cloud for Sustainability
                                     </Link>
                                     .
                                 </p>
@@ -1626,11 +1631,11 @@ function Support() {
                                     partners. We recently announced Microsoft
                                     Sustainability Manager, a
                                     <Link to="/support#;">
-                                        Microsoft Cloud for Sustainability
+                                        &nbsp;Microsoft Cloud for Sustainability&nbsp;
                                     </Link>
                                     solution, is being expanded
                                     <Link to="/support#;">
-                                        to give customers fuller visibility
+                                        &nbsp;to give customers fuller visibility&nbsp;
                                     </Link>
                                     into their environmental impact across
                                     carbon, water, and waste. New capabilities
@@ -1689,8 +1694,8 @@ function Support() {
                                     example, a Solution Architect can leverage
                                     the
                                     <Link to="/support#;">
-                                        reference architecture for Microsoft
-                                        Sustainability Manager
+                                        &nbsp;reference architecture for Microsoft
+                                        Sustainability Manager&nbsp;
                                     </Link>
                                     to identify the required data ingestion
                                     strategies and extensibility needed for

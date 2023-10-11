@@ -233,7 +233,6 @@ footer .inner p {
 }
 .content .inner h1 {
   font: bold 50px/1 "arial";
-  color: #000;
   margin-bottom: 20px;
   margin-top: 80px;
   transition: 0.5s;
@@ -433,7 +432,6 @@ footer .inner p {
 }
 .introduction .inner h1 {
   font: bold 30px/1 "Montserrat";
-  color: #000;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -746,7 +744,6 @@ footer .inner p {
   height: 400px;
   float: left;
   margin-right: 20px;
-  background-color: #fff;
   padding: 40px;
 }
 .progream .inner #slider li .pic article h2 {
@@ -755,12 +752,10 @@ footer .inner p {
   font-size: 30px;
 }
 .progream .inner #slider li .pic article h3 {
-  color: black;
   font: bold 30px/1 "Pretendard-Regular";
   margin-bottom: 13px;
 }
 .progream .inner #slider li .pic article p {
-  color: black;
   font: 18px/1.2 "Pretendard-Regular";
 }
 .progream .inner #slider li .pic article p:nth-of-type(1) {
@@ -1324,7 +1319,6 @@ section.data_page.on .inner .right_side .pic .right {
   justify-content: space-between;
   margin-bottom: 20px;
   transition: 1s;
-  background-color: #fff;
   margin-left: -150px;
   opacity: 0;
   border-radius: 5px;
@@ -1399,8 +1393,7 @@ section.data_page.on .inner .right_side .pic .right {
   opacity: 1;
 }
 .information aside {
-  width: 80vw;
-  height: 80vh;
+  width: 50vw;
   margin: 0 auto;
   position: fixed;
   top: 50%;
@@ -1412,18 +1405,20 @@ section.data_page.on .inner .right_side .pic .right {
   flex-direction: column;
   transition: 1s;
   background-color: #333;
+  justify-content: center;
+  align-items: center;
 }
 .information aside figure {
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 400px;
   padding: 30px;
+  justify-content: center;
   align-items: center;
 }
 .information aside figure img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 .information aside .txt {
   width: 100%;
@@ -1454,8 +1449,7 @@ section.data_page.on .inner .right_side .pic .right {
   left: 50%;
 }
 .information .location {
-  width: 80vw;
-  height: 80vh;
+  width: 50vw;
   margin: 0 auto;
   position: fixed;
   top: 50%;
@@ -1469,7 +1463,7 @@ section.data_page.on .inner .right_side .pic .right {
 .information .location figure {
   width: 100%;
   height: 100%;
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
 }
 .information .location figure #map {
   width: 100%;
@@ -1482,12 +1476,11 @@ section.data_page.on .inner .right_side .pic .right {
   gap: 20px;
 }
 .information .location .btns li {
-  width: 20%;
+  padding: 10px;
 }
 .information .location .btns li a {
   display: block;
-  height: 30px;
-  width: 100%;
+  padding: 5px 10px;
   background-color: #fff;
   font: bold 12px/30px "맑은 고딕";
   color: #555;
@@ -1601,13 +1594,13 @@ section.data_page.on .inner .right_side .pic .right {
   }
   .information aside {
     width: 100%;
-    height: 50%;
     display: flex;
     flex-direction: column;
   }
   .information aside figure {
     display: flex;
     width: 100%;
+    height: 100%;
     margin-left: 0;
     padding: 0px 20px 20px 20px;
   }
@@ -1637,11 +1630,10 @@ section.data_page.on .inner .right_side .pic .right {
   }
   .information .location {
     width: 100%;
-    height: 50%;
   }
   .information .location figure {
     width: 100%;
-    height: 100%;
+    height: 300px;
     padding: 30px;
   }
   .information .location figure #map {
@@ -1649,6 +1641,7 @@ section.data_page.on .inner .right_side .pic .right {
     height: 100%;
   }
   .information .location .btns li a {
+    padding: 0 2vh;
     font-size: 2vw;
   }
   .information .location .txt1 h1.office {
@@ -1676,7 +1669,6 @@ section.data_page.on .inner .right_side .pic .right {
 }
 .news h1 {
   font: bold 50px/1 "arial";
-  color: #000;
   margin-bottom: 20px;
   margin-top: 80px;
   transition: 0.5s;
@@ -1694,47 +1686,44 @@ section.data_page.on .inner .right_side .pic .right {
 }
 .news .tab {
   width: 350px;
-  height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
 }
-.news .tab .content {
+.news .tab > .content {
   width: 370px;
-  height: 80px;
   color: #ddd;
   cursor: pointer;
+  padding: 20px 30px 20px 30px;
 }
-.news .tab .content > p.txt {
+.news .tab > .content > p.txt {
   font-size: 14px;
   margin-bottom: 15px;
 }
-.news .tab .content > p.txt span {
+.news .tab > .content > p.txt span {
   margin: 0px 10px 0px 10px;
 }
-.news .tab .content > p.txt a {
+.news .tab > .content > p.txt a {
   font-size: 14px;
   font-weight: bold;
   text-decoration: underline;
   color: #ddd;
 }
-.news .tab .content > h3 {
+.news .tab > .content > h3 {
   font-size: 18px;
   color: #ddd;
 }
-.news .tab .content:hover > .txt {
+.news .tab > .content:hover > .txt {
   text-decoration: underline;
 }
-.news .tab .content.on {
-  color: #2f2f2f;
+.news .tab > .content.on > p.txt {
+  color: #000;
 }
-.news .tab .content.on > p.txt {
-  color: #2f2f2f;
-}
-.news .tab .content.on > p.txt a {
+.news .tab > .content.on > p.txt a {
   color: #0067bb;
 }
-.news .tab .content.on > h3 {
+.news .tab > .content.on > h3 {
   color: #2f2f2f;
 }
 .news .inner {
@@ -2285,6 +2274,55 @@ section.data_page.on .inner .right_side .pic .right {
     font: bold 4vw/1 "Rubik";
   }
 }
+body.dark {
+  background-color: #222;
+  color: #fff;
+}
+body.dark .information .inner article {
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.3);
+}
+body.dark .news .tab > .content {
+  color: #aaa;
+}
+body.dark .news .tab > .content > p.txt {
+  color: #aaa;
+}
+body.dark .news .tab > .content > p.txt a {
+  color: #aaa;
+}
+body.dark .news .tab > .content > h3 {
+  color: #aaa;
+}
+body.dark .news .tab > .content.on {
+  color: #fff;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.3);
+}
+body.dark .news .tab > .content.on > p.txt {
+  color: #fff;
+}
+body.dark .news .tab > .content.on > p.txt a {
+  color: #0067bb;
+}
+body.dark .news .tab > .content.on > h3 {
+  color: #fff;
+}
+body.dark .news .inner article > .txt {
+  color: #aaa;
+}
+body.dark .news .inner article > .txt a {
+  color: #aaa;
+}
+body.dark .support .inner > article article .text {
+  border: none;
+  background-color: #333;
+}
+body.dark .support .inner > article article .text h3 {
+  color: lightgreen;
+}
+body.dark .support .inner > article article .text p.answer {
+  color: lightgreen;
+}
+
 .scrollUpBtn {
   position: fixed;
   bottom: 3vh;

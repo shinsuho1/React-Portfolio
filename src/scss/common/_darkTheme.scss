@@ -1,0 +1,70 @@
+body.dark {
+	background-color: #222;
+	color: #fff;
+	.information {
+		.inner {
+			article {
+				box-shadow: 0 0 15px 10px rgba(0 0 0 / 30%);
+			}
+		}
+	}
+	.news {
+		.tab {
+			> .content {
+				color: #aaa;
+				> p.txt {
+					color: #aaa;
+					a {
+						color: #aaa;
+					}
+				}
+				> h3 {
+					color: #aaa;
+				}
+				&.on {
+					color: #fff;
+					box-shadow: 0 0 15px 10px rgba(0 0 0 / 30%);
+					> p.txt {
+						color: #fff;
+						a {
+							color: #0067bb;
+						}
+					}
+					> h3 {
+						color: #fff;
+					}
+				}
+			}
+		}
+		.inner {
+			article {
+				> .txt {
+					color: #aaa;
+					a {
+						color: #aaa;
+					}
+				}
+			}
+		}
+	}
+	.support {
+		.inner {
+			> article {
+				article {
+					.text {
+						border: none;
+						background-color: #333;
+						h3 {
+							color: lightgreen;
+						}
+						p {
+							&.answer {
+								color: lightgreen;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
