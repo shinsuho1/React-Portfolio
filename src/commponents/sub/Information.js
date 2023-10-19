@@ -4,46 +4,53 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
+import Pop from "../common/Pop";
 const { kakao } = window;
 function Information() {
-    //페이지가 로드됫을때 section(main)과 각 아티클에 first클래스를 붙이고, 해당 아티클을 눌렀을때 pop에 asides객체에서 해당 값 넣어주는 코드입니다
     const main = useRef(null);
-    const article1 = useRef(null);
-    const article2 = useRef(null);
-    const article3 = useRef(null);
     const pop = useRef(null);
 
     const locationPop = useRef(null);
+    const [Index, setIndex] = useState(0);
+
     const [asideTitle, setasideTitle] = useState("");
     const [asideExplan, setasideExplan] = useState("");
     const [asideImg, setasideImg] = useState("");
 
-    // const [aside, dispatch] = useReducer(asideReducer,0);
     const asides = [
         {
-            img: "img/sub/information/Second_article_1.jpg",
+            img: "img/sub/information/First_article_2.png",
             title: "Microsoft365",
             explan: "Microsoft 365 is a package/subscription type that bundles programs together for use in various situations.",
         },
         {
-            img: "img/sub/information/Second_article_2.jpg",
+            img: "img/sub/information/unauth-m365-hero-treatment-b-288e7c77d3.png",
             title: "Introduction",
             explan: "Microsoft 365 is a package that includes everything including document work,video editing, presentations, databases, team projects, synchronization, and diversity.",
         },
     ];
 
+    // const getOffsetTop = () => {
+    //     const sections = frame.current.parentElement.querySelectorAll(".hide");
+    //     const sectionsArr = Array.from(sections);
+    //     sectionsArr.map((el) => {
+    //         posArr.push(el.offsetTop);
+    //     });
+    // }
+
     useEffect(() => {
         setTimeout(() => {
-            main.current.classList.add("atvie");
+            main.current.classList.add("active");
             setTimeout(() => {
-                article1.current.classList.add("first");
-                article2.current.classList.add("first");
-                article3.current.classList.add("first");
+                const article = main.current.parentElement.querySelectorAll(".hide");
+                article.forEach((el, index) => {
+                    article[index].classList.add("active");
+                });
             }, 500);
         }, 300);
     }, []);
 
-    function kakaoApi() {
+    const kakaoApi = () => {
         var container = document.getElementById("map");
         const btns = document.querySelectorAll(".btns>li");
         const main_txt = document.querySelector(".location>.txt1");
@@ -115,25 +122,16 @@ function Information() {
 
     return (
         <section className="content information" ref={main}>
-            <nav>
-                <ul>
-                    <li className="on">Main</li>
-                    <li>Introduction</li>
-                    <li>Address</li>
-                </ul>
-            </nav>
-            <div className="inner ative">
+            <div className="inner">
                 <h1>
                     Information <span>Microsoft365</span>
                 </h1>
 
                 <article
-                    ref={article1}
+                    className="hide"
                     onClick={() => {
-                        setasideTitle(asides[0].title);
-                        setasideExplan(asides[0].explan);
-                        setasideImg(asides[0].img);
-                        pop.current.classList.add("on");
+                        setIndex(0);
+                        pop.current.open();
                     }}
                 >
                     <div className="pic">
@@ -152,12 +150,10 @@ function Information() {
                     </div>
                 </article>
                 <article
-                    ref={article2}
+                    className="hide"
                     onClick={() => {
-                        setasideTitle(asides[1].title);
-                        setasideExplan(asides[1].explan);
-                        setasideImg(asides[1].img);
-                        pop.current.classList.add("on");
+                        setIndex(1);
+                        pop.current.open();
                     }}
                 >
                     <div className="pic">
@@ -177,11 +173,12 @@ function Information() {
                     </div>
                 </article>
                 <article
-                    className="address"
-                    ref={article3}
+                    className="address hide"
                     onClick={() => {
-                        kakaoApi();
-                        locationPop.current.classList.add("on");
+                        // kakaoApi();
+                        // locationPop.current.classList.add("on");
+                        setIndex(2);
+                        pop.current.open();
                     }}
                 >
                     <div className="text">
@@ -197,23 +194,46 @@ function Information() {
                 </article>
             </div>
 
-            <aside className="" ref={pop}>
-                <div className="txt">
-                    <h1>{asideTitle}</h1>
-                    <p>{asideExplan}</p>
-                    <span>
-                        <FontAwesomeIcon
-                            icon={faPlus}
-                            onClick={() => {
-                                pop.current.classList.remove("on");
-                            }}
-                        />
-                    </span>
-                </div>
-                <figure>
-                    <img src={`${process.env.PUBLIC_URL}/${asideImg}`} alt="" />
-                </figure>
-            </aside>
+            {Index === 0 &&
+                <Pop ref={pop}>
+                    <div className="txt">
+                        <h1>{asides[0].title}</h1>
+                        <p>{asides[0].explan}</p>
+                    </div>
+                    <figure>
+                        <img src={`${process.env.PUBLIC_URL}/${asides[0].img}`} alt={asides[0].title} />
+                    </figure>
+                </Pop>}
+            {Index === 1 &&
+                <Pop ref={pop}>
+                    <div className="txt">
+                        <h1>{asides[1].title}</h1>
+                        <p>{asides[1].explan}</p>
+                    </div>
+                    <figure>
+                        <img src={`${process.env.PUBLIC_URL}/${asides[1].img}`} alt={asides[1].title} />
+                    </figure>
+                </Pop>}
+            {Index === 2 &&
+                <Pop ref={pop}>
+                    <div className="txt">
+                        <h1>한국마이크로소프트</h1>
+                        <p>Headquarters</p>
+                        <p>서울 종로구 종로1길 50 더케이트윈타워 A동</p>
+                    </div>
+                    <figure>
+                        <div id="map"></div>
+                    </figure>
+                    <ul className="btns">
+                        <li className="on">
+                            <Link to="/">Headquarters</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Branch</Link>
+                        </li>
+                    </ul>
+                </Pop>}
+
 
             <aside className="location" ref={locationPop}>
                 <div className="txt1">

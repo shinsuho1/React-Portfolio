@@ -14,6 +14,8 @@
 @import './common/header';
 @import './common/footer';
 @import './common/content';
+@import './common/pop';
+@import './common/btn';
 
 @import './main/main';
 @import './main/introduction';
@@ -26,27 +28,6 @@
 @import './sub/support';
 
 @import './common/darkTheme';
-
-.scrollUpBtn {
-	position: fixed;
-	bottom: 3vh;
-	right: 2vw;
-	display: none;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	opacity: 0.4;
-	i {
-		font-size: 30px;
-		color: #fff;
-		border-radius: 50%;
-		background-color: #000;
-		border: 1px solid #000;
-	}
-	&.on {
-		display: block;
-	}
-}
 
 .stop-scrolling {
 	height: 100%;

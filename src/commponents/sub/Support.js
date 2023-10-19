@@ -13,33 +13,6 @@ function Support() {
 
     const [menuTab, setmenuTab] = useState([]);
 
-    /*const handlingmenuTab = (menu) => {
-        // menuTab.includes(menu) ? console.log("있음") : console.log("없음");
-        const targetValue = menu;
-        let index = menuTab.indexOf(targetValue);
-        const newMenuTab = [
-            ...menuTab.slice(0, index),
-            ...menuTab.slice(index + 1),
-        ];
-        setmenuTab(newMenuTab);
-        if (index !== -1) {
-            menuTab[index].current.classList.add("on");
-        } else {
-            menuTab[index].current.classList.add("on");
-        }
-        // if (menuTab.includes(menu)) {
-        //     if (index !== -1) {
-        //         menuTab[index].current.classList.add("on");
-        //     }
-        // } else if (!menuTab.includes(menu)) {
-        //     menuTab.splice(index, 1);
-        //     console.log(menuTab[index]);
-        //     menuTab[index].current.classList.remove("on");
-        // }
-        // setmenuTab([...menuTab, menu]);
-    };*/
-
-
     const handleTabClick = (id) => {
         if (menuTab.includes(id)) {
             setmenuTab(menuTab.filter((menuId) => menuId !== id));

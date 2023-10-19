@@ -46,32 +46,11 @@
 				float: left;
 				margin-right: 30px;
 				.fa-microsoft,
-				.fa-node {
+				.fa-node,
+				.fa-js {
 					font-size: 30px;
 					color: #6a88d8;
 				}
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: contain;
-				}
-			}
-			p {
-				position: absolute;
-				opacity: 0;
-				top: 250px;
-				padding: 5px;
-				border: 1px solid #000;
-				border-radius: 15px;
-			}
-			.ms {
-				left: 20px;
-			}
-			.adobe {
-				left: 80px;
-			}
-			.node {
-				left: 145px;
 			}
 		}
 	}
@@ -98,28 +77,6 @@
 		.square {
 			opacity: 1;
 			right: -370px;
-		}
-	}
-	.pop {
-		width: 100%;
-		height: 100vh;
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: rgba(0, 0, 0, 0.8);
-		overflow: hidden;
-		padding: 5vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 5;
-
-		.btnClose {
-			position: absolute;
-			top: 50px;
-			right: 50px;
-			color: #fff;
-			cursor: pointer;
 		}
 	}
 }

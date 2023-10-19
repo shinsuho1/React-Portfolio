@@ -3,132 +3,55 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, Autoplay } from 'swiper';
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function ProgreamSlider() {
-    let enableClick = true;
     const scrollValue = useRef(null);
     const slider = useRef(null);
     const slider_title = useRef(null);
     const [items, setItems] = useState("");
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        setItems(slider_title.current.childNodes);
-        console.log(items);
-        init();
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll);
+    //     setItems(slider_title.current.childNodes);
+    //     console.log(items);
+    //     init();
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
 
-    }, []);
-    const handleScroll = () => {
-        if (window.scrollY >= scrollValue.current.offsetTop - 300) {
-            scrollValue.current.classList.add("on");
-        }
-    };
+    // }, []);
+    // const handleScroll = () => {
+    //     if (window.scrollY >= scrollValue.current.offsetTop - 300) {
+    //         scrollValue.current.classList.add("on");
+    //     }
+    // };
 
-
-    function init() {
-        slider.current.style.left = "-100%";
-        slider.current.prepend(slider.current.lastElementChild);
-        slider_title.current.style.left = "-100%";
-        slider_title.current.prepend(slider_title.current.lastElementChild);
-    }
-
-    function nextSlide() {
-        slider.current.style.transition = "margin-left 1s";
-        slider.current.style.marginLeft = "-100%";
-        slider.current.addEventListener(
-            "transitionend",
-            () => {
-                slider.current.append(slider.current.firstElementChild);
-                slider.current.style.transition = "none";
-                slider.current.style.marginLeft = "0%";
-                enableClick = true;
-            },
-            { once: true }
-        );
-    }
-    function nextSlide_title() {
-        slider_title.current.style.transition = "margin-left 1s";
-        slider_title.current.style.marginLeft = "-100%";
-        slider_title.current.addEventListener(
-            "transitionend",
-            () => {
-                slider_title.current.append(slider_title.current.firstElementChild);
-                slider_title.current.style.transition = "none";
-                slider_title.current.style.marginLeft = "0%";
-                enableClick = true;
-            },
-            { once: true }
-        );
-    }
-
-    function prevSlide() {
-        slider.current.style.transition = "margin-left 1s";
-        slider.current.style.marginLeft = "100%";
-        slider.current.addEventListener(
-            "transitionend",
-            () => {
-                slider.current.prepend(slider.current.lastElementChild);
-                slider.current.style.transition = "none";
-                slider.current.style.marginLeft = "0%";
-                enableClick = true;
-            },
-            { once: true }
-        );
-    }
-
-    function prevSlide_title() {
-        slider_title.current.style.transition = "margin-left 1s";
-        slider_title.current.style.marginLeft = "100%";
-        slider_title.current.addEventListener(
-            "transitionend",
-            () => {
-                slider_title.current.prepend(slider_title.current.lastElementChild);
-                slider_title.current.style.transition = "none";
-                slider_title.current.style.marginLeft = "0%";
-                enableClick = true;
-            },
-            { once: true }
-        );
-    }
 
     return (
         <section className="progream" ref={scrollValue}>
             <div className="inner">
-                <div className="title">
-                    <ul id="title" ref={slider_title}>
-                        <li className="excel" >
+                <Swiper modules={[Pagination, Navigation, Autoplay]}
+                    autoplay={{ delay: 3000, disableOnInteraction: false, duration: 500 }}
+                    pagination={{ clickable: true }}
+                    navigation={true}
+                    spaceBetween={0}
+                    loop={true}
+                    slidesPerView={1}
+                    centeredSlides={true}>
+
+
+                    <SwiperSlide>
+                        <div className="excel title" >
                             <h2>Document Processing Program</h2>
                             <h1>Excel</h1>
-                        </li>
-                        <li className="powerpoint">
-                            <h2>Document Processing Program</h2>
-                            <h1>Powerpoint</h1>
-                        </li>
-                        <li className="word">
-                            <h2>Document Processing Program</h2>
-                            <h1>Word</h1>
-                        </li>
-                        <li className="access">
-                            <h2>Document Processing Program</h2>
-                            <h1>Access</h1>
-                        </li>
-                        <li className="teams">
-                            <h2> Video conference, meeting call</h2>
-                            <h1>Teams</h1>
-                        </li>
-                        <li className="onedrive">
-                            <h2>Personal Cloud Storage</h2>
-                            <h1>OneDrive</h1>
-                        </li>
-                    </ul>
-                </div>
-                <ul id="slider" ref={slider}>
-                    <li>
-                        <div className="excel">
+                        </div>
+                        <div className="excel box">
                             <div className="pic">
-                                <article>
+                                <article className="text">
                                     <h2>Excel</h2>
                                     <h3>Make business decisions easily</h3>
                                     <p>
@@ -160,29 +83,24 @@ function ProgreamSlider() {
                                 </article>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div className="powerpoint">
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="powerpoint title">
+                            <h2>Document Processing Program</h2>
+                            <h1>Powerpoint</h1>
+                        </div>
+                        <div className="powerpoint box">
                             <div className="pic">
                                 <article>
                                     <h2>Powerpoint</h2>
                                     <h3>Turn your ideas into presentations</h3>
                                     <p>
-                                        Turn your ideas into customized
-                                        presentations with Copilot in
-                                        PowerPoint. Copilot turns existing Word
-                                        documents into presentations, prompts
-                                        you to create new presentations based on
-                                        your outline, and finds the best places
-                                        to place eye-catching images. Captivate
-                                        your audience with skillful
-                                        storytelling.
+                                        Turn your ideas into customized presentations with Copilot in PowerPoint. Copilot turns existing Word documents into presentations, prompts
+                                        you to create new presentations based on your outline, and finds the best places to place eye-catching images. Captivate your audience with skillful storytelling.
                                     </p>
                                     <h3>Simpler slide design than ever</h3>
                                     <p>
-                                        Use PowerPoint’s designers and ideas to
-                                        create beautifully designed, impactful
-                                        slides.
+                                        Use PowerPoint’s designers and ideas to create beautifully designed, impactful slides.
                                     </p>
 
                                     <div className="btn">
@@ -198,9 +116,13 @@ function ProgreamSlider() {
                                 </article>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div className="word">
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="word title">
+                            <h2>Document Processing Program</h2>
+                            <h1>Word</h1>
+                        </div>
+                        <div className="word box">
                             <div className="pic">
                                 <article>
                                     <h2>Word</h2>
@@ -237,9 +159,13 @@ function ProgreamSlider() {
                                 </article>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div className="access">
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="access title">
+                            <h2>Document Processing Program</h2>
+                            <h1>Access</h1>
+                        </div>
+                        <div className="access box">
                             <div className="pic">
                                 <article>
                                     <h2>Access</h2>
@@ -276,9 +202,13 @@ function ProgreamSlider() {
                                 </article>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div className="teams">
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="teams title">
+                            <h2> Video conference, meeting call</h2>
+                            <h1>Teams</h1>
+                        </div>
+                        <div className="teams box">
                             <div className="pic">
                                 <article>
                                     <h2>Teams</h2>
@@ -315,9 +245,14 @@ function ProgreamSlider() {
                                 </article>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div className="onedrive">
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className="onedrive title">
+                            <h2>Personal Cloud Storage</h2>
+                            <h1>OneDrive</h1>
+                        </div>
+                        <div className="onedrive box">
                             <div className="pic">
                                 <article>
                                     <h2>OneDrive</h2>
@@ -352,30 +287,8 @@ function ProgreamSlider() {
                                 </article>
                             </div>
                         </div>
-                    </li>
-                </ul>
-
-                <Link
-                    to="/#;"
-                    className="prev"
-                    onClick={() => {
-                        prevSlide();
-                        prevSlide_title();
-                    }}
-                >
-                    <FontAwesomeIcon icon={faAngleLeft} />
-                </Link>
-
-                <Link
-                    to="/#;"
-                    className="next"
-                    onClick={() => {
-                        nextSlide();
-                        nextSlide_title();
-                    }}
-                >
-                    <FontAwesomeIcon icon={faAngleRight} />
-                </Link>
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </section>
     );

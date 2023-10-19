@@ -8,29 +8,10 @@ import Information from "./commponents/sub/Information";
 import News from "./commponents/sub/News";
 import Download from "./commponents/sub/Download";
 import Support from "./commponents/sub/Support";
-
+import Btn from "./commponents/common/Btn";
 import "./scss/style.scss";
 
 function App() {
-	let scrollUpBtn = document.createElement("div");
-
-	scrollUpBtn.classList.add("scrollUpBtn");
-	scrollUpBtn.innerHTML = `<i class="fa-solid fa-chevron-up"></i>`;
-
-	document.body.append(scrollUpBtn);
-
-	scrollUpBtn.addEventListener("click", () => {
-		window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-	});
-
-	window.addEventListener("scroll", () => {
-		let scroll = window.scrollY;
-		if (scroll >= 100) {
-			scrollUpBtn.classList.add("on");
-		} else if (scroll < 100) {
-			scrollUpBtn.classList.remove("on");
-		}
-	});
 
 	return (
 		<>
@@ -48,7 +29,7 @@ function App() {
 			<Route path="/download" component={Download} />
 
 			<Route path="/support" component={Support} />
-
+			<Btn />
 			<Footer />
 
 		</>

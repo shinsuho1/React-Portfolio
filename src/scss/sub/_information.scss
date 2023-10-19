@@ -1,30 +1,6 @@
 .information {
 	width: 100%;
 	position: relative;
-	nav {
-		display: none;
-		width: 150px;
-		height: 120px;
-		position: fixed;
-		left: 23vw;
-		top: 22vh;
-		border-radius: 15px;
-		ul {
-			width: 100%;
-			height: 100%;
-			li {
-				width: 100%;
-				height: 40px;
-				font: 16px/40px 'Montserrat';
-				color: #999;
-				&.on {
-					font-weight: bold;
-					color: #000;
-					font-size: 20px;
-				}
-			}
-		}
-	}
 	> .inner {
 		width: 680px;
 		h1 {
@@ -114,7 +90,7 @@
 				transition: 1s 0.4s;
 			}
 
-			&.first {
+			&.active {
 				margin-left: 0;
 				opacity: 1;
 			}
@@ -266,7 +242,7 @@
 		}
 	}
 
-	&.atvie {
+	&.active {
 		.inner {
 			h1 {
 				margin-top: 60px;
