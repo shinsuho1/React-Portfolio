@@ -1,12 +1,34 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
-import { faSun } from "@fortawesome/free-solid-svg-icons";
+// import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faMoon } from "@fortawesome/free-regular-svg-icons";
+// import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 function Btn() {
-    const [Theme, setTheme] = useState(true)
+    const [Theme, setTheme] = useState(false);
+    const scrollBtn = useRef(null);
+    useEffect(() => {
+        window.addEventListener("scroll", actionScroll);
+
+        return () => {
+            window.removeEventListener("scroll", actionScroll);
+        }
+    }, []);
+
+    const actionScroll = () => {
+        let scroll = window.scrollY;
+        if (scroll >= 100) {
+            scrollBtn.current.classList.add("on");
+        }
+        else if (scroll < 100) {
+            scrollBtn.current.classList.remove("on");
+        }
+    }
+
     const scrollUp = () => {
         window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        console.log("이벤트발생");
     }
 
 
@@ -16,11 +38,14 @@ function Btn() {
                 {Theme ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
                 {Theme ? document.body.classList.add("dark") : document.body.classList.remove("dark")}
             </div>
-            <div class="up" onClick={() => { scrollUp() }}>
+            <div class="up" ref={scrollBtn} onClick={() => {
+                console.log("클릭");
+                scrollUp();
+            }}>
                 <FontAwesomeIcon icon={faArrowUp} />
             </div>
         </div>
-    )
+    );
 }
 
 export default Btn
