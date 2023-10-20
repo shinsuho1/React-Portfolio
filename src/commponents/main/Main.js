@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,15 +12,9 @@ function Main() {
     const frame = useRef("");
     const youtubeView = useRef("");
 
-    useEffect(() => {
-        setTimeout(() => {
-            frame.current.classList.add("on");
-        }, 700);
-    }, []);
-
     return (
         <>
-            <section className="main" ref={frame}>
+            <section className="main page" ref={frame}>
                 <div className="title">
                     <h2>Microsoft365</h2>
                     <h1>Production Program Introduction</h1>

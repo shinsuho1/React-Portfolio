@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-let reClick = true;
 function Support() {
     const [selectedTab, setselectedTab] = useState("faq");
     const handlingTab = (menu) => {

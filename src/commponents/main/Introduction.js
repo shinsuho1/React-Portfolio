@@ -1,26 +1,11 @@
-import React, { useRef, useEffect, memo } from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 function Introduction() {
-    const scrollValue = useRef(null);
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    const handleScroll = () => {
-        if (window.scrollY >= scrollValue.current.offsetTop - 300) {
-            scrollValue.current.classList.add("on");
-        }
-    };
-
     return (
-        <section className="introduction" ref={scrollValue}>
+        <section className="introduction page">
             <div className="inner">
                 <h1>Introduction to where it is used</h1>
                 <p>

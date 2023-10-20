@@ -1,10 +1,8 @@
 import React, { useRef, useEffect } from "react";
-
-import { Link } from "react-router-dom";
-
 import Download_info from "./Download_info";
 import Download_version from "./Download_version";
 import Download_type from "./Download_type";
+
 function Download() {
     const frame = useRef("");
     let posArr = [];

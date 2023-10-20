@@ -1,8 +1,4 @@
-import React, { useRef, useEffect, memo, useState } from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import React, { memo } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper';
 import "swiper/css";
@@ -10,29 +6,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 function ProgreamSlider() {
-    const scrollValue = useRef(null);
-    const slider = useRef(null);
-    const slider_title = useRef(null);
-    const [items, setItems] = useState("");
-    // useEffect(() => {
-    //     window.addEventListener("scroll", handleScroll);
-    //     setItems(slider_title.current.childNodes);
-    //     console.log(items);
-    //     init();
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-
-    // }, []);
-    // const handleScroll = () => {
-    //     if (window.scrollY >= scrollValue.current.offsetTop - 300) {
-    //         scrollValue.current.classList.add("on");
-    //     }
-    // };
 
 
     return (
-        <section className="progream" ref={scrollValue}>
+        <section className="progream page">
             <div className="inner">
                 <Swiper modules={[Pagination, Navigation, Autoplay]}
                     autoplay={{ delay: 3000, disableOnInteraction: false, duration: 500 }}

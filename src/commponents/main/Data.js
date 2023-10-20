@@ -1,45 +1,13 @@
-import React, { useRef, useEffect, memo } from "react";
+import React, { memo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComputer } from "@fortawesome/free-solid-svg-icons";
 import { faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 
 function Data() {
-    const scrollValue = useRef(null);
-    let eventOnce = true;
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-    const handleScroll = () => {
-        if (window.scrollY >= scrollValue.current.offsetTop - 300) {
-            scrollValue.current.classList.add("on");
-            if (eventOnce) {
-                eventOnce = false;
-                const data_lable = document.querySelectorAll(".table");
-                data_lable.forEach((el, index) => {
-                    let numElement = el.querySelector(".num");
-                    let num = parseFloat(numElement.innerText);
 
-                    let count = 0;
-                    let time = 3000 / num;
-
-                    let interval = setInterval(() => {
-                        if (count === num) {
-                            clearInterval(interval);
-                        } else {
-                            count++;
-                            numElement.innerText = count + "%";
-                        }
-                    }, time);
-                });
-            }
-        }
-    };
     return (
-        <section className="data_page" ref={scrollValue}>
+        <section className="data_page page">
             <div className="inner">
                 <article className="left_side">
                     <div className="main_text">

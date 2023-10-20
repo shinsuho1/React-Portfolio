@@ -1,17 +1,18 @@
 .progream {
 	width: 100%;
 	height: 100vh;
-	padding: 150px 0px;
+	padding-top: 200px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	.inner {
 		width: 1180px;
 		height: 550px;
 		overflow: hidden;
 		margin: 0px auto;
 		position: relative;
-		opacity: 1; // 0
-		bottom: 0px; //-100
+		opacity: 0;
+		bottom: -100px;
 		transition: 1s;
 
 		.swiper {
@@ -25,7 +26,6 @@
 				display: flex;
 				overflow: hidden;
 				flex-direction: column;
-				// gap: ;
 				> .title {
 					width: 100%;
 					padding-left: 40px;
@@ -236,25 +236,6 @@
 				background-color: #000;
 			}
 		}
-
-		.prev {
-			.fa-angle-left {
-				position: absolute;
-				top: 57.5%;
-				left: 0px;
-				color: #000;
-				font: 20px 'arial';
-			}
-		}
-		.next {
-			.fa-angle-right {
-				position: absolute;
-				top: 57.5%;
-				right: 0px;
-				color: #000;
-				font: 20px 'arial';
-			}
-		}
 	}
 	&.on {
 		.inner {
@@ -267,7 +248,6 @@
 @media screen and (max-width: 539px) {
 	.progream {
 		width: 100%;
-		height: 130vh;
 		padding: 100px 0;
 		.inner {
 			width: 100%;
@@ -276,135 +256,61 @@
 			justify-content: space-between;
 			align-items: center;
 
-			div.title {
-				display: none;
-			}
+			.swiper {
+				.swiper-slide {
+					> .title {
+						display: none;
+					}
+					> .box {
+						width: 100%;
+						height: 100%;
 
-			#slider {
-				li {
-					width: 16.6%;
-					.pic {
-						article {
+						.pic {
 							width: 100%;
 							height: 100%;
-							padding: 10px;
-							margin: 0;
-							display: flex;
-							flex-direction: column;
-							h2 {
-								display: block;
-							}
-							h3 {
-								font-size: 5vw;
-							}
-							p {
-							}
+							article {
+								width: 100%;
+								height: 100%;
+								padding: 10px;
+								margin: 0;
+								display: flex;
+								flex-direction: column;
+								h2 {
+									display: block;
+								}
+								h3 {
+									font-size: 5vw;
+								}
+								.btn {
+									display: none;
+								}
 
-							.btn {
-								display: none;
-								position: relative;
-								bottom: -400px;
-								margin-top: 20px;
-								button {
-									background-color: #fff;
-									border-radius: 50px;
-									width: 200px;
-									height: 35px;
-									cursor: pointer;
-									font: 15px/35px 'Pretendard-Regular';
-									&:last-child {
-										color: #fff;
-									}
+								img {
+									display: none;
 								}
-							}
-
-							img {
-								object-fit: contain;
-							}
-						}
-					}
-					.excel {
-						article {
-							h2 {
-								color: #217345;
-							}
-							button {
-								border: 1px solid #217345;
-								&:nth-of-type(2) {
-									background-color: #217345;
-								}
-							}
-						}
-					}
-					.word {
-						article {
-							h2 {
-								color: #185abd;
-							}
-							button {
-								border: 1px solid #185abd;
 								&:last-child {
-									background-color: #185abd;
-								}
-							}
-						}
-					}
-					.powerpoint {
-						article {
-							h2 {
-								color: #d24726;
-							}
-							button {
-								border: 1px solid #d24726;
-								&:last-child {
-									background-color: #d24726;
-								}
-							}
-						}
-					}
-					.access {
-						article {
-							h2 {
-								color: #a4373a;
-							}
-							button {
-								border: 1px solid #a4373a;
-								&:last-child {
-									background-color: #a4373a;
-								}
-							}
-						}
-					}
-					.teams {
-						article {
-							button {
-								border: 1px solid #444bb1;
-								&:last-child {
-									background-color: #444bb1;
-								}
-							}
-						}
-					}
-					.onedrive {
-						article {
-							color: #0678d3;
-							button {
-								margin-top: 20px;
-								border: 1px solid #0678d3;
-								&:last-child {
-									background-color: #0678d3;
+									display: none;
 								}
 							}
 						}
 					}
 				}
-			}
-
-			.prev {
-				top: 50%;
-			}
-			.next {
-				top: 50%;
+				.swiper-button-next {
+					bottom: 0px;
+					right: 0;
+					color: #000;
+				}
+				.swiper-button-prev {
+					color: #000;
+					left: 0;
+					top: 45%;
+				}
+				.swiper-pagination {
+					padding-bottom: 40px;
+				}
+				.swiper-pagination-bullet-active {
+					background-color: #000;
+				}
 			}
 		}
 	}
