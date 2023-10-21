@@ -1,49 +1,12 @@
-import React, { memo, useEffect, useRef } from "react";
+import React, { memo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComputer } from "@fortawesome/free-solid-svg-icons";
 import { faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 
 function Data() {
-    const table = useRef(null);
-    const frame = useRef(null);
-    let eventOnce = true;
-    const setdata = () => {
-        let scroll = window.scrollY;
-        const Value = frame.current.offsetTop;
-        const base = -window.innerHeight / 3;
-        if (scroll >= Value + base) {
-            if (eventOnce) {
-                eventOnce = false;
-                const data_lable = table.current.children;
-                const data_lable_Arr = Array.from(data_lable);
-                data_lable_Arr.map((el, index) => {
-                    let numElement = el.querySelector(".num");
-                    let num = parseFloat(numElement.innerText);
-                    let count = 0;
-                    let time = 3000 / num;
-                    let interval = setInterval(() => {
-                        if (count == num) {
-                            clearInterval(interval);
-                        } else {
-                            count++;
-                            numElement.innerText = count + "%";
-                        }
-                    }, time);
-                });
-            }
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", setdata);
-        return () => {
-            window.removeEventListener("scroll", setdata);
-        };
-    }, []);
-
     return (
-        <section className="data_page page" ref={frame}>
+        <section className="data_page page">
             <div className="inner">
                 <article className="left_side">
                     <div className="main_text">
@@ -58,7 +21,7 @@ function Data() {
                             processing programs were the highest.
                         </p>
                     </div>
-                    <div className="sub_text" ref={table}>
+                    <div className="sub_text">
                         <div className="table">
                             <p>
                                 Isproved <span className="num">60%</span>

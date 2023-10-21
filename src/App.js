@@ -12,28 +12,25 @@ import Btn from "./commponents/common/Btn";
 import "./scss/style.scss";
 
 function App() {
+    return (
+        <>
+            <Header />
 
-	return (
-		<>
-			<Header />
+            <Route exact path="/">
+                <Mainpage />
+            </Route>
 
-			<Route exact path="/">
-				<Mainpage />
-			</Route>
+            <Route path="/information" component={Information} />
 
+            <Route path="/news" component={News} />
 
-			<Route path="/information" component={Information} />
+            <Route path="/download" component={Download} />
 
-			<Route path="/news" component={News} />
-
-			<Route path="/download" component={Download} />
-
-			<Route path="/support" component={Support} />
-			<Btn />
-			<Footer />
-
-		</>
-	);
+            <Route path="/support" component={Support} />
+            <Btn />
+            <Footer />
+        </>
+    );
 }
 
 export default App;

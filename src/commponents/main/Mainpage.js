@@ -8,13 +8,13 @@ import Data from "./Data";
 import { useRef, useEffect } from "react";
 
 function Mainpage() {
-    const frame = useRef("");
+    const frame = useRef(null);
     let posArr = [];
+    let eventOnce = true;
 
     const getOffsetTop = () => {
         const sections = frame.current.parentElement.querySelectorAll(".page");
-        const sectionsArr = Array.from(sections);
-        sectionsArr.map((el) => {
+        sections.forEach((el) => {
             posArr.push(el.offsetTop);
         });
     };
@@ -27,6 +27,26 @@ function Mainpage() {
             if (scroll >= posArr[index] + base) {
                 sections[index].classList.add("on");
             }
+            if (scroll >= posArr[3] + base) {
+                if (eventOnce) {
+                    eventOnce = false;
+                    const data_lable = frame.current.querySelectorAll(".table");
+                    data_lable.forEach((el, index) => {
+                        let numElement = el.querySelector(".num");
+                        let num = parseFloat(numElement.innerText);
+                        let count = 0;
+                        let time = 3000 / num;
+                        let interval = setInterval(() => {
+                            if (count === num) {
+                                clearInterval(interval);
+                            } else {
+                                count++;
+                                numElement.innerText = count + "%";
+                            }
+                        }, time);
+                    });
+                }
+            }
         });
     };
 
@@ -36,6 +56,7 @@ function Mainpage() {
                 frame.current.parentElement.querySelectorAll(".page");
             sections[0].classList.add("on");
         }, 700);
+
         getOffsetTop();
         window.addEventListener("resize", getOffsetTop);
         window.addEventListener("scroll", activation);
@@ -43,7 +64,7 @@ function Mainpage() {
             window.removeEventListener("resize", getOffsetTop);
             window.removeEventListener("scroll", activation);
         };
-    }, []);
+    }, [getOffsetTop, activation]);
 
     return (
         <main ref={frame}>
