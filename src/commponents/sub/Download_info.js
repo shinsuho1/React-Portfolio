@@ -11,8 +11,7 @@ function Download_info() {
                     <span className="col2">subscribe right now!</span>
                 </h1>
                 <p className="ex">
-                    Can use it anytime, anywhere as long as there is
-                    internet!
+                    Can use it anytime, anywhere as long as there is internet!
                     <br />
                     Try this package that is essential when working with
                     documents.
@@ -28,7 +27,7 @@ function Download_info() {
                 </p>
             </div>
         </section>
-    )
+    );
 }
 
-export default Download_info
+export default Download_info;

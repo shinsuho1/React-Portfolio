@@ -1,4 +1,4 @@
-import { useRef, useReducer, useEffect } from "react";
+import { useRef, useReducer } from "react";
 const { kakao } = window;
 
 const intialState = {
@@ -33,7 +33,7 @@ function reducer(state, action) {
     }
 }
 
-function Location() {
+function Information_location() {
     const [state, dispatch] = useReducer(reducer, intialState);
     const container = useRef(null);
     const frame = useRef(null);
@@ -93,4 +93,4 @@ function Location() {
     );
 }
 
-export default Location;
+export default Information_location;

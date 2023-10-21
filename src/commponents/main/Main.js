@@ -21,8 +21,8 @@ function Main() {
                     <p>
                         An introduction page for Microsoft that can be used
                         individually or in teamwork
-                        <br /> such as presentation materials and materials to be
-                        submitted.
+                        <br /> such as presentation materials and materials to
+                        be submitted.
                     </p>
                     <Link
                         to="/#;"
@@ -51,7 +51,12 @@ function Main() {
                 <div className="square"></div>
             </section>
             <Pop ref={youtubeView}>
-                <iframe src="https://www.youtube.com/embed/qKG8r1NERl4" width="100%" height="100%" ></iframe>
+                <iframe
+                    title="viewYoutube"
+                    src="https://www.youtube.com/embed/qKG8r1NERl4"
+                    width="100%"
+                    height="100%"
+                ></iframe>
             </Pop>
         </>
     );

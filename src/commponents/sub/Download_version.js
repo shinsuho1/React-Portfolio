@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindows } from "@fortawesome/free-brands-svg-icons";
 import { faApple } from "@fortawesome/free-brands-svg-icons";
@@ -32,7 +32,7 @@ function Download_version() {
             </ul>
             <p>It can be used on the same OS as above.</p>
         </section>
-    )
+    );
 }
 
-export default Download_version
+export default Download_version;

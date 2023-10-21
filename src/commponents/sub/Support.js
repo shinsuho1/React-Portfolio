@@ -57,8 +57,9 @@ function Support() {
                                 Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${menuTab.includes(1) ? "on" : ""
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(1) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Office 2021 is sold as a one-time purchase,
@@ -106,8 +107,9 @@ function Support() {
                                 365?
                             </h2>
                             <div
-                                className={`text ${menuTab.includes(2) ? "on" : ""
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(2) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Microsoft 365 is compatible with PC, Mac,
@@ -134,8 +136,9 @@ function Support() {
                                 Mac?
                             </h2>
                             <div
-                                className={`text ${menuTab.includes(3) ? "on" : ""
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(3) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     No. Apps are tailored to work best on each
@@ -163,8 +166,9 @@ function Support() {
                                 Microsoft 365 subscription?
                             </h2>
                             <div
-                                className={`text ${menuTab.includes(4) ? "on" : ""
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(4) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Yes. Documents that you have created belong
@@ -187,8 +191,9 @@ function Support() {
                                 Is Internet access required for Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${menuTab.includes(5) ? "on" : ""
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(5) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Internet access is required to install and
@@ -245,8 +250,9 @@ function Support() {
                                 it for Microsoft 365?
                             </h2>
                             <div
-                                className={`text ${menuTab.includes(6) ? "on" : ""
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(6) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     Your Microsoft account is the combination of
@@ -257,7 +263,8 @@ function Support() {
                                     account that you can use, or you can create
                                     a new account.
                                     <Link to="/support#;">
-                                        &nbsp;Learn more about a Microsoft account
+                                        &nbsp;Learn more about a Microsoft
+                                        account
                                     </Link>
                                     .
                                 </p>
@@ -287,8 +294,9 @@ function Support() {
                                 subscription?
                             </h2>
                             <div
-                                className={`text ${menuTab.includes(7) ? "on" : ""
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(7) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     You can share Microsoft 365 Family with five
@@ -312,8 +320,9 @@ function Support() {
                                 other people?
                             </h2>
                             <div
-                                className={`text ${menuTab.includes(8) ? "on" : ""
-                                    }`}
+                                className={`text ${
+                                    menuTab.includes(8) ? "on" : ""
+                                }`}
                             >
                                 <p>
                                     If you have an active Microsoft 365 Family
@@ -350,11 +359,20 @@ function Support() {
 
                 <article className={selectedTab === "qna" ? "on" : ""}>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(9)}>
-                            <h2 className={`${menuTab.includes(9) ? "on" : ""}`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(9)}
+                        >
+                            <h2
+                                className={`${menuTab.includes(9) ? "on" : ""}`}
+                            >
                                 Opening the new form and closing the previous
                             </h2>
-                            <div className={`text ${menuTab.includes(9) ? "on" : ""}`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(9) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     In my project i am stuck at a point and can
                                     not figure out how to open a new form inside
@@ -379,11 +397,22 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(10)}>
-                            <h2 className={`${menuTab.includes(10) ? "on" : ""
-                                }`}>Microphone is not working</h2>
-                            <div className={`text ${menuTab.includes(10) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(10)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(10) ? "on" : ""
+                                }`}
+                            >
+                                Microphone is not working
+                            </h2>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(10) ? "on" : ""
+                                }`}
+                            >
                                 <p>permanent footer row in datagridview</p>
                                 <p>
                                     hi, is there a way by which our datagridview
@@ -417,11 +446,22 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(11)}>
-                            <h2 className={`${menuTab.includes(11) ? "on" : ""
-                                }`}>Request Violates Guidelines</h2>
-                            <div className={`text ${menuTab.includes(11) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(11)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(11) ? "on" : ""
+                                }`}
+                            >
+                                Request Violates Guidelines
+                            </h2>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(11) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     I'm sorry, but your request contains
                                     inappropriate content. As an AI assistant, I
@@ -437,14 +477,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(12)}>
-                            <h2 className={`${menuTab.includes(12) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(12)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(12) ? "on" : ""
+                                }`}
+                            >
                                 What is the difference between SharePoint and
                                 OneDrive?
                             </h2>
-                            <div className={`text ${menuTab.includes(12) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(12) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     When I upload a file through an MS Teams
                                     Channel chat, I can see the File in the
@@ -509,11 +558,22 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(13)}>
-                            <h2 className={`${menuTab.includes(13) ? "on" : ""
-                                }`}>ASP.NET CORE WEBAPI Bearer Token</h2>
-                            <div className={`text ${menuTab.includes(13) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(13)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(13) ? "on" : ""
+                                }`}
+                            >
+                                ASP.NET CORE WEBAPI Bearer Token
+                            </h2>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(13) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     This api
                                     <Link to="https://visitsapi.azurewebsites.net/api/Visits">
@@ -582,14 +642,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(14)}>
-                            <h2 className={`${menuTab.includes(14) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(14)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(14) ? "on" : ""
+                                }`}
+                            >
                                 A Connection To The Remote Computer Could Not Be
                                 Established In Windows 10
                             </h2>
-                            <div className={`text ${menuTab.includes(14) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(14) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     All computers that try to connect to my VM's
                                     VPN Window server 2022 gets this error. I
@@ -653,14 +722,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(15)}>
-                            <h2 className={`${menuTab.includes(15) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(15)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(15) ? "on" : ""
+                                }`}
+                            >
                                 Windows 11 Drag and Drop Files to Folders Not
                                 Working
                             </h2>
-                            <div className={`text ${menuTab.includes(15) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(15) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     This is not the issue of dragging to the
                                     taskbar. For some reason, I just can't drag
@@ -686,14 +764,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(16)}>
-                            <h2 className={`${menuTab.includes(16) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(16)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(16) ? "on" : ""
+                                }`}
+                            >
                                 Output to Blazor backend from Azure deployed AI
                                 model
                             </h2>
-                            <div className={`text ${menuTab.includes(16) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(16) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     Hi, We need to get the output of an AI model
                                     that runs as a managed endpoint in Azure to
@@ -740,14 +827,23 @@ function Support() {
 
                 <article className={selectedTab === "announcement" ? "on" : ""}>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(17)}>
-                            <h2 className={`${menuTab.includes(17) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(17)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(17) ? "on" : ""
+                                }`}
+                            >
                                 Streamline supplier engagement with the new ESG
                                 value chain solution
                             </h2>
-                            <div className={`text ${menuTab.includes(17) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(17) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     Solving scope 3 carbon measurement requires
                                     a collaborative approach, since up to 90
@@ -825,7 +921,8 @@ function Support() {
                                 <p>
                                     The ESG value chain solution, a feature in
                                     <Link to="/support#;">
-                                        &nbsp;Microsoft Sustainability Manager&nbsp;
+                                        &nbsp;Microsoft Sustainability
+                                        Manager&nbsp;
                                     </Link>
                                     , will enable organizations to collect and
                                     report more detailed data about
@@ -852,14 +949,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(18)}>
-                            <h2 className={`${menuTab.includes(18) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(18)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(18) ? "on" : ""
+                                }`}
+                            >
                                 How next-generation AI and digital tools
                                 transform the retail frontline
                             </h2>
-                            <div className={`text ${menuTab.includes(18) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(18) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     2023 has been quite a rollercoaster year for
                                     us in the retail industry. We’ve faced our
@@ -888,8 +994,8 @@ function Support() {
                                     industry’s success. That’s why Microsoft is
                                     committed to
                                     <Link to="/support#;">
-                                        &nbsp;Store Operations Assist embedded in
-                                        Microsoft Teams&nbsp;
+                                        &nbsp;Store Operations Assist embedded
+                                        in Microsoft Teams&nbsp;
                                     </Link>
                                     that empower these frontline heroes. We’ve
                                     seen strong and consistent double-digit
@@ -938,8 +1044,8 @@ function Support() {
                                     advanced retail workflows, data, and
                                     insights. Today we’re introducing
                                     <Link to="/support#;">
-                                        &nbsp;Store Operations Assist embedded in
-                                        Microsoft Teams&nbsp;
+                                        &nbsp;Store Operations Assist embedded
+                                        in Microsoft Teams&nbsp;
                                     </Link>
                                     to make it even easier for store teams to
                                     stay in the flow of work. Store associates
@@ -954,14 +1060,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(19)}>
-                            <h2 className={`${menuTab.includes(19) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(19)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(19) ? "on" : ""
+                                }`}
+                            >
                                 How next-generation AI and digital tools are
                                 transforming healthcare
                             </h2>
-                            <div className={`text ${menuTab.includes(19) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(19) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     In the midst of an ever-evolving healthcare
                                     industry with mounting demands, healthcare
@@ -1001,7 +1116,8 @@ function Support() {
                                 <p>
                                     Providers must also
                                     <Link to="/support#;">
-                                        &nbsp;capitalize on digital technologies&nbsp;
+                                        &nbsp;capitalize on digital
+                                        technologies&nbsp;
                                     </Link>
                                     to help improve operational efficiencies,
                                     quality of care, and patient satisfaction
@@ -1014,7 +1130,8 @@ function Support() {
                                     healthcare. For example, healthcare workers
                                     are using Teams as their
                                     <Link to="/support#;">
-                                        &nbsp;communications and collaboration hub
+                                        &nbsp;communications and collaboration
+                                        hub
                                     </Link>
                                     , facilitating virtual video visits and
                                     keeping care teams connected. We’ve seen
@@ -1048,14 +1165,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(20)}>
-                            <h2 className={`${menuTab.includes(20) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(20)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(20) ? "on" : ""
+                                }`}
+                            >
                                 The future of work: How next-generation AI is
                                 empowering the frontline
                             </h2>
-                            <div className={`text ${menuTab.includes(20) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(20) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     Over the last few years, manufacturing and
                                     mobility companies around the world have
@@ -1128,14 +1254,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(21)}>
-                            <h2 className={`${menuTab.includes(21) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(21)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(21) ? "on" : ""
+                                }`}
+                            >
                                 Empowering your business: The latest from
                                 Microsoft Cloud for Industry
                             </h2>
-                            <div className={`text ${menuTab.includes(21) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(21) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     This is an exciting time for partners and
                                     Microsoft. Last week, we celebrated the
@@ -1212,7 +1347,8 @@ function Support() {
                                 <h4>Healthcare</h4>
                                 <p>
                                     <Link to="/support#;">
-                                        &nbsp;Microsoft Cloud for Healthcare&nbsp;
+                                        &nbsp;Microsoft Cloud for
+                                        Healthcare&nbsp;
                                     </Link>
                                     provides trusted and integrated capabilities
                                     that make it easier for healthcare
@@ -1239,14 +1375,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(22)}>
-                            <h2 className={`${menuTab.includes(22) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(22)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(22) ? "on" : ""
+                                }`}
+                            >
                                 Announcing general availability of Azure Data
                                 Manager for Energy
                             </h2>
-                            <div className={`text ${menuTab.includes(22) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(22) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     Microsoft partners with the energy industry
                                     in the global transition to a more secure,
@@ -1255,13 +1400,16 @@ function Support() {
                                     pleased to announce the general availability
                                     of
                                     <Link to="/support#;">
-                                        &nbsp;Azure Data Manager for Energy&nbsp;
+                                        &nbsp;Azure Data Manager for
+                                        Energy&nbsp;
                                     </Link>
                                     . Designed to help energy companies
                                     accelerate digital innovation, Azure Data
                                     Manager for Energy is an open, fully-managed
                                     OSDU® Data Platform service powered by the
-                                    <Link to="/support#;">&nbsp;Microsoft Cloud&nbsp;</Link>
+                                    <Link to="/support#;">
+                                        &nbsp;Microsoft Cloud&nbsp;
+                                    </Link>
                                     . The offering integrates with almost any
                                     dataset and source, enables management of
                                     compute-intensive workloads at global scale,
@@ -1325,8 +1473,8 @@ function Support() {
                                     wellbore, and reservoir workflows. Learn
                                     more in the announcement of the
                                     <Link to="/support#;">
-                                        &nbsp;Azure Data Manager for Energy developer
-                                        tier
+                                        &nbsp;Azure Data Manager for Energy
+                                        developer tier
                                     </Link>
                                     .
                                 </p>
@@ -1406,15 +1554,24 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(23)}>
-                            <h2 className={`${menuTab.includes(23) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(23)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(23) ? "on" : ""
+                                }`}
+                            >
                                 Microsoft Cloud for Manufacturing: Tackling data
                                 accessibility in manufacturing alongside
                                 partners
                             </h2>
-                            <div className={`text ${menuTab.includes(23) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(23) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     Over the past few years, Microsoft has
                                     collaborated with thousands of manufacturing
@@ -1441,8 +1598,8 @@ function Support() {
                                 <p>
                                     Microsoft has an
                                     <Link to="/support#;">
-                                        &nbsp;unmatched set of deep technological
-                                        capabilities&nbsp;
+                                        &nbsp;unmatched set of deep
+                                        technological capabilities&nbsp;
                                     </Link>
                                     that are already familiar to users across
                                     organizations, ranging from modern work to
@@ -1484,7 +1641,9 @@ function Support() {
                                     our customers and provides a way for
                                     customers to identify proven partner
                                     solutions aligned with the
-                                    <Link to="/support#;">&nbsp;Microsoft Cloud&nbsp;</Link>
+                                    <Link to="/support#;">
+                                        &nbsp;Microsoft Cloud&nbsp;
+                                    </Link>
                                     and our industry clouds. The designation
                                     validates that our partners’ solutions meet
                                     the high standards of data accessibility
@@ -1553,14 +1712,23 @@ function Support() {
                         </div>
                     </article>
                     <article>
-                        <div className="title" onClick={() => handleTabClick(24)}>
-                            <h2 className={`${menuTab.includes(24) ? "on" : ""
-                                }`}>
+                        <div
+                            className="title"
+                            onClick={() => handleTabClick(24)}
+                        >
+                            <h2
+                                className={`${
+                                    menuTab.includes(24) ? "on" : ""
+                                }`}
+                            >
                                 Announcing Well-Architected for Industry:
                                 Improve workloads and solution deployments
                             </h2>
-                            <div className={`text ${menuTab.includes(24) ? "on" : ""
-                                }`}>
+                            <div
+                                className={`text ${
+                                    menuTab.includes(24) ? "on" : ""
+                                }`}
+                            >
                                 <p>
                                     As organizations look to deploy industry
                                     solutions on Microsoft Cloud, embarking on a
@@ -1603,11 +1771,13 @@ function Support() {
                                     partners. We recently announced Microsoft
                                     Sustainability Manager, a
                                     <Link to="/support#;">
-                                        &nbsp;Microsoft Cloud for Sustainability&nbsp;
+                                        &nbsp;Microsoft Cloud for
+                                        Sustainability&nbsp;
                                     </Link>
                                     solution, is being expanded
                                     <Link to="/support#;">
-                                        &nbsp;to give customers fuller visibility&nbsp;
+                                        &nbsp;to give customers fuller
+                                        visibility&nbsp;
                                     </Link>
                                     into their environmental impact across
                                     carbon, water, and waste. New capabilities
@@ -1666,8 +1836,8 @@ function Support() {
                                     example, a Solution Architect can leverage
                                     the
                                     <Link to="/support#;">
-                                        &nbsp;reference architecture for Microsoft
-                                        Sustainability Manager&nbsp;
+                                        &nbsp;reference architecture for
+                                        Microsoft Sustainability Manager&nbsp;
                                     </Link>
                                     to identify the required data ingestion
                                     strategies and extensibility needed for

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 function Footer() {
     return (
@@ -7,34 +7,28 @@ function Footer() {
                 <h1>Microsoft365 Introduction</h1>
                 <ul>
                     <li>
-                        <Link to="/">
-                            Community
-                        </Link>
+                        <Link to="/">Community</Link>
                     </li>
                     <span>|</span>
                     <li>
-                        <Link to="/">
-                            Privacy
-                        </Link>
+                        <Link to="/">Privacy</Link>
                     </li>
                     <span>|</span>
                     <li>
-                        <Link to="/">
-                            Download
-                        </Link>
+                        <Link to="/">Download</Link>
                     </li>
                     <span>|</span>
                     <li>
-                        <Link to="/">
-                            GitHub
-                        </Link>
+                        <Link to="/">GitHub</Link>
                     </li>
                 </ul>
-                <p>&copy; If you have any errors or corrections on this page, please contact us at suhoshin1816@gmail.com XD
+                <p>
+                    &copy; If you have any errors or corrections on this page,
+                    please contact us at suhoshin1816@gmail.com XD
                 </p>
             </div>
         </footer>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

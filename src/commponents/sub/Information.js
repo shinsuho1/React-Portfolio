@@ -29,10 +29,9 @@ function Information() {
             setTimeout(() => {
                 const article =
                     main.current.parentElement.querySelectorAll(".hide");
-                article[0].classList.add("active");
-                article[1].classList.add("active");
-                article[2].classList.add("active");
-                // article[2].classList.add("address");
+                article.forEach((el, index) => {
+                    el.classList.add("active");
+                });
             }, 500);
         }, 300);
 
