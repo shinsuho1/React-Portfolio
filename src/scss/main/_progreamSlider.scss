@@ -1,317 +1,312 @@
 .progream {
-	width: 100%;
-	height: 100vh;
-	padding-top: 200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	.inner {
-		width: 1180px;
-		height: 550px;
-		overflow: hidden;
-		margin: 0px auto;
-		position: relative;
-		opacity: 0;
-		bottom: -100px;
-		transition: 1s;
+    width: 100%;
+    height: 100vh;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .inner {
+        width: 1180px;
+        height: 550px;
+        overflow: hidden;
+        margin: 0px auto;
+        position: relative;
+        opacity: 0;
+        bottom: -100px;
+        transition: 1s;
 
-		.swiper {
-			width: 100%;
-			height: 100%;
-			.swiper-slide {
-				width: 100%;
-				height: 100%;
-				z-index: 2;
-				text-align: justify;
-				display: flex;
-				overflow: hidden;
-				flex-direction: column;
-				> .title {
-					width: 100%;
-					padding-left: 40px;
-					h2 {
-						font: bold 20px 'Pretendard-Regular';
-						color: #888;
-						margin-bottom: 10px;
-					}
-					h1 {
-						font: bold 40px 'Pretendard-Regular';
-					}
+        .swiper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                text-align: justify;
+                display: flex;
+                overflow: hidden;
+                flex-direction: column;
+                > .title {
+                    width: 100%;
+                    padding-left: 40px;
+                    h2 {
+                        font: bold 20px "Pretendard-Regular";
+                        color: #888;
+                        margin-bottom: 10px;
+                    }
+                    h1 {
+                        font: bold 40px "Pretendard-Regular";
+                    }
 
-					&.excel {
-						h1 {
-							color: #217345;
-						}
-					}
-					&.powerpoint {
-						h1 {
-							color: #d24726;
-						}
-					}
-					&.word {
-						h1 {
-							color: #185abd;
-						}
-					}
-					&.access {
-						h1 {
-							color: #a4373a;
-						}
-					}
-					&.teams {
-						h1 {
-							color: #444bb1;
-						}
-					}
-					&.onedrive {
-						h1 {
-							color: #0678d3;
-						}
-					}
-				}
-				> .box {
-					width: 100%;
-					height: 100%;
+                    &.excel {
+                        h1 {
+                            color: #217345;
+                        }
+                    }
+                    &.powerpoint {
+                        h1 {
+                            color: #d24726;
+                        }
+                    }
+                    &.word {
+                        h1 {
+                            color: #185abd;
+                        }
+                    }
+                    &.access {
+                        h1 {
+                            color: #a4373a;
+                        }
+                    }
+                    &.teams {
+                        h1 {
+                            color: #444bb1;
+                        }
+                    }
+                    &.onedrive {
+                        h1 {
+                            color: #0678d3;
+                        }
+                    }
+                }
+                > .box {
+                    width: 100%;
+                    height: 100%;
 
-					.pic {
-						width: 100%;
-						height: 100%;
-						article {
-							width: 580px;
-							height: 400px;
-							float: left;
-							margin-right: 20px;
-							padding: 40px;
-							flex-wrap: nowrap;
-							text-align: left;
-							h2 {
-								display: none;
-								margin-bottom: 5px;
-								font-size: 30px;
-							}
-							h3 {
-								width: 100%;
-								font: bold 30px/1 'Pretendard-Regular';
-								margin-bottom: 13px;
-							}
-							p {
-								font: 18px/1.2 'Pretendard-Regular';
-								&:nth-of-type(1) {
-									margin-bottom: 30px;
-								}
-							}
-							.btn {
-								display: flex;
-								justify-content: space-around;
-								margin-top: 20px;
-								button {
-									background-color: #fff;
-									border-radius: 50px;
-									width: 200px;
-									height: 35px;
-									cursor: pointer;
-									font: 15px/35px 'Pretendard-Regular';
-									&:last-child {
-										color: #fff;
-									}
-								}
-							}
+                    .pic {
+                        width: 100%;
+                        height: 100%;
+                        article {
+                            width: 580px;
+                            height: 400px;
+                            float: left;
+                            margin-right: 20px;
+                            padding: 40px;
+                            flex-wrap: nowrap;
+                            text-align: left;
+                            h2 {
+                                display: none;
+                                margin-bottom: 5px;
+                                font-size: 30px;
+                            }
+                            h3 {
+                                width: 100%;
+                                font: bold 30px/1 "Pretendard-Regular";
+                                margin-bottom: 13px;
+                            }
+                            p {
+                                font: 18px/1.2 "Pretendard-Regular";
+                                &:nth-of-type(1) {
+                                    margin-bottom: 30px;
+                                }
+                            }
+                            .btn {
+                                display: flex;
+                                justify-content: space-around;
+                                margin-top: 20px;
+                                button {
+                                    background-color: #fff;
+                                    border-radius: 50px;
+                                    width: 200px;
+                                    height: 35px;
+                                    cursor: pointer;
+                                    font: 15px/35px "Pretendard-Regular";
+                                    &:last-child {
+                                        color: #fff;
+                                    }
+                                }
+                            }
 
-							&:last-child {
-								margin-right: 0px;
-							}
-							img {
-								width: 100%;
-								height: 100%;
-								object-fit: cover;
-							}
-						}
-					}
+                            &:last-child {
+                                margin-right: 0px;
+                            }
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
 
-					&:last-child {
-						margin-right: 0px;
-					}
+                    &:last-child {
+                        margin-right: 0px;
+                    }
 
-					img {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-					}
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
 
-					&.excel {
-						article {
-							h2 {
-								color: #217345;
-							}
-							button {
-								border: 1px solid #217345;
-								&:nth-of-type(2) {
-									background-color: #217345;
-								}
-							}
-						}
-					}
-					&.word {
-						article {
-							h2 {
-								color: #185abd;
-							}
-							button {
-								border: 1px solid #185abd;
-								&:last-child {
-									background-color: #185abd;
-								}
-							}
-						}
-					}
-					&.powerpoint {
-						article {
-							h2 {
-								color: #d24726;
-							}
-							button {
-								border: 1px solid #d24726;
-								&:last-child {
-									background-color: #d24726;
-								}
-							}
-						}
-					}
-					&.access {
-						article {
-							h2 {
-								color: #a4373a;
-							}
-							button {
-								border: 1px solid #a4373a;
-								&:last-child {
-									background-color: #a4373a;
-								}
-							}
-						}
-					}
-					&.teams {
-						article {
-							h2 {
-								color: #444bb1;
-							}
-							button {
-								border: 1px solid #444bb1;
-								&:last-child {
-									background-color: #444bb1;
-								}
-							}
-						}
-					}
-					&.onedrive {
-						article {
-							h2 {
-								color: #0678d3;
-							}
-							button {
-								margin-top: 20px;
-								border: 1px solid #0678d3;
-								&:last-child {
-									background-color: #0678d3;
-								}
-							}
-						}
-					}
-				}
-			}
-			.swiper-button-next {
-				top: 45%;
-				right: 0;
-				color: #000;
-			}
-			.swiper-button-prev {
-				color: #000;
-				left: 0;
-				top: 45%;
-			}
-			.swiper-pagination {
-				padding-bottom: 40px;
-			}
-			.swiper-pagination-bullet-active {
-				background-color: #000;
-			}
-		}
-	}
-	&.on {
-		.inner {
-			opacity: 1;
-			bottom: 0px;
-		}
-	}
+                    &.excel {
+                        article {
+                            h2 {
+                                color: #217345;
+                            }
+                            button {
+                                border: 1px solid #217345;
+                                &:nth-of-type(2) {
+                                    background-color: #217345;
+                                }
+                            }
+                        }
+                    }
+                    &.word {
+                        article {
+                            h2 {
+                                color: #185abd;
+                            }
+                            button {
+                                border: 1px solid #185abd;
+                                &:last-child {
+                                    background-color: #185abd;
+                                }
+                            }
+                        }
+                    }
+                    &.powerpoint {
+                        article {
+                            h2 {
+                                color: #d24726;
+                            }
+                            button {
+                                border: 1px solid #d24726;
+                                &:last-child {
+                                    background-color: #d24726;
+                                }
+                            }
+                        }
+                    }
+                    &.access {
+                        article {
+                            h2 {
+                                color: #a4373a;
+                            }
+                            button {
+                                border: 1px solid #a4373a;
+                                &:last-child {
+                                    background-color: #a4373a;
+                                }
+                            }
+                        }
+                    }
+                    &.teams {
+                        article {
+                            h2 {
+                                color: #444bb1;
+                            }
+                            button {
+                                border: 1px solid #444bb1;
+                                &:last-child {
+                                    background-color: #444bb1;
+                                }
+                            }
+                        }
+                    }
+                    &.onedrive {
+                        article {
+                            h2 {
+                                color: #0678d3;
+                            }
+                            button {
+                                margin-top: 20px;
+                                border: 1px solid #0678d3;
+                                &:last-child {
+                                    background-color: #0678d3;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-button-next {
+                top: 45%;
+                right: 0;
+                color: #000;
+            }
+            .swiper-button-prev {
+                color: #000;
+                left: 0;
+                top: 45%;
+            }
+            .swiper-pagination {
+                padding-bottom: 40px;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: #000;
+            }
+        }
+    }
+    &.on {
+        .inner {
+            opacity: 1;
+            bottom: 0px;
+        }
+    }
 }
 
 @media screen and (max-width: 539px) {
-	.progream {
-		width: 100%;
-		padding: 100px 0;
-		.inner {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+    .progream {
+        width: 100%;
+        height: 100%;
+        padding: 100px 0;
+        .inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-			.swiper {
-				.swiper-slide {
-					> .title {
-						display: none;
-					}
-					> .box {
-						width: 100%;
-						height: 100%;
+            .swiper {
+                .swiper-slide {
+                    > .title {
+                        display: none;
+                    }
+                    > .box {
+                        width: 100%;
+                        height: 100%;
 
-						.pic {
-							width: 100%;
-							height: 100%;
-							article {
-								width: 100%;
-								height: 100%;
-								padding: 10px;
-								margin: 0;
-								display: flex;
-								flex-direction: column;
-								h2 {
-									display: block;
-								}
-								h3 {
-									font-size: 5vw;
-								}
-								.btn {
-									display: none;
-								}
+                        .pic {
+                            width: 100%;
+                            height: 100%;
+                            article {
+                                width: 100%;
+                                height: 100%;
+                                padding: 10px;
+                                margin: 0;
+                                display: flex;
+                                flex-direction: column;
+                                h2 {
+                                    display: block;
+                                }
+                                h3 {
+                                    font-size: 5vw;
+                                }
+                                .btn {
+                                    display: none;
+                                }
 
-								img {
-									display: none;
-								}
-								&:last-child {
-									display: none;
-								}
-							}
-						}
-					}
-				}
-				.swiper-button-next {
-					bottom: 0px;
-					right: 0;
-					color: #000;
-				}
-				.swiper-button-prev {
-					color: #000;
-					left: 0;
-					top: 45%;
-				}
-				.swiper-pagination {
-					padding-bottom: 40px;
-				}
-				.swiper-pagination-bullet-active {
-					background-color: #000;
-				}
-			}
-		}
-	}
+                                img {
+                                    display: none;
+                                }
+                                &:last-child {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .swiper-button-next {
+                    display: none;
+                }
+                .swiper-button-prev {
+                    display: none;
+                }
+                .swiper-pagination {
+                    position: relative;
+                }
+            }
+        }
+    }
 }

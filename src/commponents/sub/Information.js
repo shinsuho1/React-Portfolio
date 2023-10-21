@@ -1,8 +1,7 @@
-import React, { useReducer } from "react";
+import React from "react";
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 
-import Information_location from "./Information_location";
+import InformationLocation from "./Information_location";
 import Pop from "../common/Pop";
 
 function Information() {
@@ -10,7 +9,6 @@ function Information() {
     const pop = useRef(null);
 
     const [Index, setIndex] = useState(0);
-
 
     const asides = [
         {
@@ -25,26 +23,23 @@ function Information() {
         },
     ];
 
-    // const getOffsetTop = () => {
-    //     const sections = frame.current.parentElement.querySelectorAll(".hide");
-    //     const sectionsArr = Array.from(sections);
-    //     sectionsArr.map((el) => {
-    //         posArr.push(el.offsetTop);
-    //     });
-    // }
-
     useEffect(() => {
-        setTimeout(() => {
+        const activeCalss = setTimeout(() => {
             main.current.classList.add("active");
             setTimeout(() => {
-                const article = main.current.parentElement.querySelectorAll(".hide");
-                article.forEach((el, index) => {
-                    article[index].classList.add("active");
-                });
+                const article =
+                    main.current.parentElement.querySelectorAll(".hide");
+                article[0].classList.add("active");
+                article[1].classList.add("active");
+                article[2].classList.add("active");
+                // article[2].classList.add("address");
             }, 500);
         }, 300);
-    }, []);
 
+        return () => {
+            clearTimeout(activeCalss);
+        };
+    }, []);
 
     return (
         <section className="content information" ref={main}>
@@ -98,33 +93,40 @@ function Information() {
                         </p>
                     </div>
                 </article>
-                <Information_location />
+
+                <InformationLocation />
             </div>
 
-            {Index === 0 &&
+            {Index === 0 && (
                 <Pop ref={pop}>
                     <div className="txt">
                         <h1>{asides[0].title}</h1>
                         <p>{asides[0].explan}</p>
                     </div>
                     <figure>
-                        <img src={`${process.env.PUBLIC_URL}/${asides[0].img}`} alt={asides[0].title} />
+                        <img
+                            src={`${process.env.PUBLIC_URL}/${asides[0].img}`}
+                            alt={asides[0].title}
+                        />
                     </figure>
-                </Pop>}
-            {Index === 1 &&
+                </Pop>
+            )}
+            {Index === 1 && (
                 <Pop ref={pop}>
                     <div className="txt">
                         <h1>{asides[1].title}</h1>
                         <p>{asides[1].explan}</p>
                     </div>
                     <figure>
-                        <img src={`${process.env.PUBLIC_URL}/${asides[1].img}`} alt={asides[1].title} />
+                        <img
+                            src={`${process.env.PUBLIC_URL}/${asides[1].img}`}
+                            alt={asides[1].title}
+                        />
                     </figure>
-                </Pop>}
-
+                </Pop>
+            )}
         </section>
     );
 }
 
 export default Information;
-

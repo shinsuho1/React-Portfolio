@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
@@ -40,14 +40,15 @@ function Header() {
                     </ul>
                 </nav>
                 <Menu ref={menu} />
-                <Link to="/" className="btnCall" >
-                    <FontAwesomeIcon icon={faBars} onClick={() => menu.current.click()} />
+                <Link to="/" className="btnCall">
+                    <FontAwesomeIcon
+                        icon={faBars}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            menu.current.click();
+                        }}
+                    />
                 </Link>
-
-
-
-
-
             </div>
         </header>
     );

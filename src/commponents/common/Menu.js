@@ -1,19 +1,26 @@
-import React, { useState, forwardRef, useImperativeHandle } from 'react'
+import React, { useState, forwardRef, useImperativeHandle } from "react";
 import { Link } from "react-router-dom";
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
 const Menu = forwardRef((props, ref) => {
     const [Open, setOpen] = useState(false);
     useImperativeHandle(ref, () => {
         return {
-            click: () => setOpen(!Open)
-        }
+            click: () => setOpen(!Open),
+        };
     });
+
     return (
         <AnimatePresence>
-            {Open &&
-                <motion.nav className="menuMo" onClick={() => setOpen(!Open)} initial={{ x: -370 }} animate={{ x: -81, transition: { duration: 0.5 } }} exit={{ x: -370, transition: { duration: 0.5 } }}>
+            {Open && (
+                <motion.nav
+                    className="menuMo"
+                    onClick={() => setOpen(!Open)}
+                    initial={{ left: -270 }}
+                    animate={{ left: 0, transition: { duration: 0.5 } }}
+                    exit={{ left: -270, transition: { duration: 0.5 } }}
+                >
                     <h2>
                         <Link to="/">
                             <FontAwesomeIcon icon={faDiscord} />
@@ -39,10 +46,10 @@ const Menu = forwardRef((props, ref) => {
                         </li>
                     </ul>
                     <p>&copy; Microsoft365 Introduction</p>
-                </motion.nav>}
+                </motion.nav>
+            )}
         </AnimatePresence>
+    );
+});
 
-    )
-})
-
-export default Menu
+export default Menu;

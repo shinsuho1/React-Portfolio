@@ -11,13 +11,13 @@ function Mainpage() {
     const frame = useRef(null);
 
     useEffect(() => {
-        setTimeout(() => {
+        let posArr = [];
+        let eventOnce = true;
+        const activeClass = setTimeout(() => {
             const sections =
                 frame.current.parentElement.querySelectorAll(".page");
             sections[0].classList.add("on");
         }, 700);
-        let posArr = [];
-        let eventOnce = true;
 
         const getOffsetTop = () => {
             const sections =
@@ -65,6 +65,7 @@ function Mainpage() {
         return () => {
             window.removeEventListener("resize", getOffsetTop);
             window.removeEventListener("scroll", activation);
+            clearTimeout(activeClass);
         };
     }, [frame]);
 
