@@ -17,7 +17,7 @@ function Mainpage() {
         sectionsArr.map((el) => {
             posArr.push(el.offsetTop);
         });
-    }
+    };
 
     const activation = () => {
         const sections = frame.current.parentElement.querySelectorAll(".page");
@@ -27,13 +27,13 @@ function Mainpage() {
             if (scroll >= posArr[index] + base) {
                 sections[index].classList.add("on");
             }
-        })
-
-    }
+        });
+    };
 
     useEffect(() => {
         setTimeout(() => {
-            const sections = frame.current.parentElement.querySelectorAll(".page");
+            const sections =
+                frame.current.parentElement.querySelectorAll(".page");
             sections[0].classList.add("on");
         }, 700);
         getOffsetTop();
@@ -42,8 +42,7 @@ function Mainpage() {
         return () => {
             window.removeEventListener("resize", getOffsetTop);
             window.removeEventListener("scroll", activation);
-
-        }
+        };
     }, []);
 
     return (

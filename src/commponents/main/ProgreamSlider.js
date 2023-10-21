@@ -1,28 +1,30 @@
 import React, { memo } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from "swiper";
 import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function ProgreamSlider() {
-
-
     return (
         <section className="progream page">
             <div className="inner">
-                <Swiper modules={[Pagination, Navigation, Autoplay]}
-                    autoplay={{ delay: 3000, disableOnInteraction: false, duration: 500 }}
+                <Swiper
+                    modules={[Pagination, Navigation, Autoplay]}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        duration: 500,
+                    }}
                     pagination={{ clickable: true }}
                     navigation={true}
                     spaceBetween={0}
                     loop={true}
                     slidesPerView={1}
-                    centeredSlides={true}>
-
-
+                    centeredSlides={true}
+                >
                     <SwiperSlide>
-                        <div className="excel title" >
+                        <div className="excel title">
                             <h2>Document Processing Program</h2>
                             <h1>Excel</h1>
                         </div>
@@ -72,12 +74,21 @@ function ProgreamSlider() {
                                     <h2>Powerpoint</h2>
                                     <h3>Turn your ideas into presentations</h3>
                                     <p>
-                                        Turn your ideas into customized presentations with Copilot in PowerPoint. Copilot turns existing Word documents into presentations, prompts
-                                        you to create new presentations based on your outline, and finds the best places to place eye-catching images. Captivate your audience with skillful storytelling.
+                                        Turn your ideas into customized
+                                        presentations with Copilot in
+                                        PowerPoint. Copilot turns existing Word
+                                        documents into presentations, prompts
+                                        you to create new presentations based on
+                                        your outline, and finds the best places
+                                        to place eye-catching images. Captivate
+                                        your audience with skillful
+                                        storytelling.
                                     </p>
                                     <h3>Simpler slide design than ever</h3>
                                     <p>
-                                        Use PowerPoint’s designers and ideas to create beautifully designed, impactful slides.
+                                        Use PowerPoint’s designers and ideas to
+                                        create beautifully designed, impactful
+                                        slides.
                                     </p>
 
                                     <div className="btn">
