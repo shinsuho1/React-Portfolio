@@ -1,6 +1,6 @@
 import React, { useState, forwardRef, useImperativeHandle } from "react";
 import { Link } from "react-router-dom";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faWindows } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
 const Menu = forwardRef((props, ref) => {
@@ -23,7 +23,7 @@ const Menu = forwardRef((props, ref) => {
                 >
                     <h2>
                         <Link to="/">
-                            <FontAwesomeIcon icon={faDiscord} />
+                            <FontAwesomeIcon icon={faWindows} />
                         </Link>
                         <img
                             src={`${process.env.PUBLIC_URL}/img/close.png`}

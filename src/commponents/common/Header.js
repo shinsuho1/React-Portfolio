@@ -1,9 +1,9 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWindows } from "@fortawesome/free-brands-svg-icons";
 import Menu from "./Menu";
 function Header() {
     const frame = useRef(null);
@@ -20,7 +20,7 @@ function Header() {
             <div className="inner">
                 <h1>
                     <Link to="/">
-                        <FontAwesomeIcon icon={faDiscord} />
+                        <FontAwesomeIcon icon={faWindows} />
                     </Link>
                 </h1>
                 <nav className="menuWeb">

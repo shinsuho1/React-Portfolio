@@ -14,7 +14,6 @@ function ProgreamSlider() {
                     autoplay={{
                         delay: 3000,
                         disableOnInteraction: false,
-                        duration: 500,
                     }}
                     pagination={{ clickable: true }}
                     navigation={true}
