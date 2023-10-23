@@ -2,6 +2,39 @@ body.dark {
 	background-color: #222;
 	color: #fff;
 	transition: 0.5s;
+	.btnCall {
+		.fa-bars {
+			color: #fff;
+		}
+	}
+	.data_page {
+		.inner {
+			.right_slide {
+				.right {
+					article {
+						.name {
+							p {
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.progream {
+		.inner {
+			.swiper {
+				.swiper-pagination-bullet {
+					background-color: #fff;
+				}
+				.swiper-pagination-bullet-active {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+
 	.information {
 		.inner {
 			article {
@@ -68,8 +101,4 @@ body.dark {
 			}
 		}
 	}
-}
-
-body.light {
-	background-color: #fff;
 }

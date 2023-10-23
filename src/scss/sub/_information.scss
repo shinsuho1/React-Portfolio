@@ -169,46 +169,31 @@
 				.pic {
 					width: 100%;
 					img {
-						width: calc(100% - 40px);
+						width: calc(100% - 7.5vw);
 						height: 100%;
 						object-fit: contain;
+					}
+					#map {
+						width: calc(100% - 7.5vw);
+						.btn {
+							width: 100%;
+							height: 100%;
+						}
 					}
 				}
 				.text {
 					width: 90%;
-					height: 130px;
-					margin: 20px;
+					height: 30vw;
 					h2 {
-						font: bold 30px/1 'Montserrat';
-						margin-bottom: 10px;
+						font: bold 5vw/1 'Montserrat';
 					}
 					p {
-						font: 16px/1 'arial';
-					}
-				}
-				&:nth-of-type(3) {
-					.pic {
-						width: 100%;
-						height: 200px;
-						img {
-							border: none;
-						}
-					}
-
-					.text {
-						height: 70px;
-						justify-content: start;
-						align-items: start;
-						margin-left: 20px;
-						h2 {
-							font: bold 30px/1 'Montserrat';
-							text-align: center;
-						}
+						font: 3vw/1 'arial';
 					}
 				}
 				&.address {
-					width: 90vw;
-					height: 100vh;
+					width: 100%;
+					height: 100%;
 					justify-content: center;
 					transition: 1s;
 					.text {
@@ -222,7 +207,7 @@
 						}
 					}
 					.pic {
-						width: 90vw;
+						width: 100%;
 						height: 90vw;
 					}
 				}
