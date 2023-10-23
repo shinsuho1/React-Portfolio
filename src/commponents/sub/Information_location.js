@@ -74,20 +74,22 @@ function Information_location() {
         <article
             className="hide"
             ref={frame}
-            onClick={() => {
-                frame.current.classList.add("address");
-                setTimeout(() => {
-                    viewMap();
-                }, 1100);
-            }}
         >
-            <div className="text">
+            <div className="text" >
                 <h2>Microsoft Address</h2>
                 <p>Current actual address of Microsoft Korea</p>
             </div>
 
-            <div className="pic">
-                <div id="map" ref={container}></div>
+            <div className="pic" >
+                <div id="map" ref={container}>
+                    <div className="btn" onClick={(e) => {
+                        frame.current.classList.add("address");
+                        setTimeout(() => {
+                            viewMap();
+                        }, 800);
+                        window.scrollTo({ left: 0, top: frame.current.offsetTop, behavior: "smooth" });
+                    }}>View Loaction</div>
+                </div>
             </div>
         </article>
     );
